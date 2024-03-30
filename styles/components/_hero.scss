@@ -1,0 +1,47 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(169, 125, 125, 0.5)) , url(../../assets/images/hero-image-movie.webp) center center;
+    background-size: cover;
+    color: $white;
+
+    &-container {
+        @include flex-position(column, center);
+        gap: 16px;
+        padding: 32px 24px;
+        
+        @media screen and (min-width: 576px){
+            padding: 48px 0;
+        }
+
+        @media screen and (min-width: 768px){
+            min-height: 250px;
+        }
+
+        @media screen and (min-width: 992px){
+            min-height: 300px;
+        }
+
+        @media screen and (min-width: 1800px){
+            min-height: 400px;
+        }
+    }
+    
+    h1 {
+        @media screen and (max-width: 992px){
+            font-size: $h2-font-size;
+        } 
+
+        @media screen and (max-width: 768px){
+            font-size: $h3-font-size;
+        }
+    }
+
+    p {
+        @media screen and (min-width: 576px){
+            font-size: $font-size-lg;
+        }
+    }
+}

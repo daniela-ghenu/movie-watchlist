@@ -1,0 +1,27 @@
+@import './abstracts/variables';
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// -----------------------
+// 1. Basics
+//------------------------
+
+@import "abstracts/_index";
+
+// -----------------------
+// 2. Components
+//------------------------
+
+@import "core/_index";
+@import "components/_index";
+
+// -----------------------
+// 3. Sections
+//------------------------
+@import "layout/_index";
+@import "utilities/_index";
+@import "pages/_index";

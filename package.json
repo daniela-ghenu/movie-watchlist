@@ -1,0 +1,14 @@
+{
+  "name": "movie-watchlist",
+  "version": "1.0.0",
+  "description": "Movie watchlist app",
+  "main": "index.js",
+  "scripts": {
+    "compile-sass": "sass styles/main.scss css/main.css -w --no-source-map"
+  },
+  "author": "Daniela",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  }
+}
