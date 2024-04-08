@@ -101,7 +101,7 @@ h5 {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(169, 125, 125, 0.5)), url(../../assets/images/hero-image-movie.webp) center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(239, 72, 115, 0.3)), url(../../assets/images/hero-image-movie.webp) center center;
   background-size: cover;
   color: #ffffff;
 }
@@ -110,7 +110,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 32px 24px;
+  padding: 48px 24px 32px;
 }
 @media screen and (min-width: 576px) {
   .hero-container {
@@ -142,10 +142,63 @@ h5 {
     font-size: 1.75rem;
   }
 }
+.hero p {
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
 @media screen and (min-width: 576px) {
   .hero p {
     font-size: 1.25rem;
   }
+}
+.hero .search-form {
+  display: flex;
+  width: min(100%, 650px);
+  border-radius: 50px;
+  margin-top: 24px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+@media screen and (max-width: 576px) {
+  .hero .search-form {
+    margin-top: 16px;
+  }
+}
+.hero .search-input {
+  padding: 10px 16px;
+  border: none;
+  width: 90%;
+}
+.hero .search-input[type=text] {
+  font-size: 1rem;
+}
+.hero .search-input:focus {
+  outline: 0;
+}
+.hero .search-button {
+  border: none;
+  border-radius: 50px;
+  padding: 0px 20px;
+  margin-left: auto;
+  font-size: 1rem;
+  background-color: #ef4873;
+  color: #ffffff;
+  transition: background-color 0.2s ease-in-out;
+}
+.hero .search-button:hover, .hero .search-button:focus {
+  background-color: #ec2256;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizespeed;
+}
+
+footer {
+  margin-top: auto;
 }
 
 .container {
