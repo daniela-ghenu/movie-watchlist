@@ -18,10 +18,12 @@
 
         @media screen and (min-width: 768px){
             min-height: 250px;
+            max-width: 576px !important;
         }
 
         @media screen and (min-width: 992px){
             min-height: 300px;
+            max-width: 768px !important;
         }
 
         @media screen and (min-width: 1800px){
