@@ -1,21 +1,21 @@
 @use "../abstracts/variables";
 
 .container {
-    margin: auto;
+  margin: auto;
 
-    @media screen and (min-width: 576px){
-        max-width: $container-sm;
-    }
+  @media screen and (min-width: 576px){
+    max-width: $container-sm;
+  }
 
-    @media screen and (min-width: 768px){
-        max-width: $container-md;
-    }
+  @media screen and (min-width: 768px){
+    max-width: $container-md;
+  }
 
-    @media screen and (min-width: 992px){
-        max-width: $container-lg;
-    }
+  @media screen and (min-width: 992px){
+    max-width: $container-lg;
+  }
 
-    @media screen and (min-width: 1200px){
-        max-width: $container-xl;
-    }
+  @media screen and (min-width: 1200px){
+    max-width: $container-xl;
+  }
 }
