@@ -165,13 +165,20 @@ h5 {
     margin-top: 16px;
   }
 }
+.hero .search-icon {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
 .hero .search-input {
-  padding: 10px 16px;
+  padding: 10px 16px 10px 8px;
   border: none;
   width: 90%;
 }
-.hero .search-input[type=text] {
-  font-size: 1rem;
+@media screen and (min-width: 400px) {
+  .hero .search-input[type=text] {
+    font-size: 1rem;
+  }
 }
 .hero .search-input:focus {
   outline: 0;
