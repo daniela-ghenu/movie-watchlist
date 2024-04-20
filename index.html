@@ -15,8 +15,7 @@
 				<div class="container hero-container">
 					<h1>Welcome to Movie&nbsp;Search&nbsp;App</h1>
 					<p>Here you can find and save your favorite movies.</p>
-		
-					<form id="search-form" class="search-form" name="form" accept-charset="utf-8" aria-label="Search form">
+					<form id="search-form" class="search-form js-search-form" name="form" accept-charset="utf-8" aria-label="Search form">
 							<label for="search-input" aria-label="Search your favorite movie"></label>
 							<span id="search-icon" class="search-icon">
 								<svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-search FormControl-input-leadingVisual" fill="#6a737d">
@@ -25,7 +24,7 @@
 							</span>
 							<input 
 							id="search-input" 
-							class="search-input" 
+							class="search-input js-search-input" 
 							name="search-input" 
 							type="text" 
 							placeholder="Search your favorite movie...">
@@ -36,10 +35,39 @@
 			</section>
 			<section class="movie-list">
 				<div class="container movie-list-container">
-					<!--  Movies will be displayed here -->
-				</div>
-			</section>
-		</main>
+					<!-- <div class="movie-item" id="tt8633478">
+						<div class="movie-header">
+							<button class="movie-poster js-open-modal" data-movie="tt8633478">
+								<img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="Star Wars: Episode V - The Empire Strikes Back" width="275" height="250">
+								</button>
+								</div>
+									<div class="movie-body">
+											<h2 class="movie-title">Star Wars: Episode V - The Empire Strikes Back</h2>
+											<div class="movie-info-container">
+												<span class="movie-year">1980 •</span>
+												<span class="movie-runtime">124 min •</span>
+												<span class="movie-genre">Action, Adventure, Fantasy</span>
+											</div>
+
+											<div class="movie-rating">
+												<img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="">
+												<span>8.7</span>
+											</div>											
+											
+											<div class="movie-buttons-container">
+												<button class="add-to-watchlist-btn js-add-to-watchlist" data-movie="tt8633478">
+													<img class="icon" src="../assets/icons/plus-icon.svg" alt="">
+													<span>Watchlist</span>
+												</button>
+												<button class="movie-info-btn js-open-modal" data-movie="tt8633478">
+													<span>i</span>
+												</button>
+											</div>
+									</div>
+								</div>
+							</div>
+						</section>   -->
+				</main>
 		<footer></footer>
 		<script src="../js/index.js" type="module"></script>
 	</body>

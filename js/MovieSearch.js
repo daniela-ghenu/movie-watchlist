@@ -3,10 +3,10 @@ class MovieSearch {
     this.API_KEY = "fb9fa955";
     this.API_URL = "http://www.omdbapi.com/";
 
-    this.searchForm = document.querySelector(".search-form");
-    this.searchBar = document.querySelector(".search-input");
+    this.searchForm = document.querySelector(".js-search-form");
+    this.searchBar = document.querySelector(".js-search-input");
     this.movieListContainer = document.querySelector(".movie-list-container");
-    this.searchForm.addEventListener("submit", (e) => {
+    this.searchForm?.addEventListener("submit", (e) => {
       e.preventDefault();
       this.handleSearch();
     });
@@ -62,24 +62,59 @@ class MovieSearch {
 
   // Generates HTML template for a single movie.
   createMovieTemplate(movie) {
-    const { Title, Poster, imdbRating, Runtime, Genre, Plot, imdbID } = movie;
+    const {
+      Title,
+      Poster,
+      Year,
+      Released,
+      imdbRating,
+      imdbID,
+      Runtime,
+      Genre,
+      Plot,
+      Language,
+      Director,
+      Actors,
+      Awards,
+    } = movie;
+
+    // Check if the movie's information is available
+    if (!imdbID) return;
+
     return `
       <div class="movie-item" id="${imdbID}">
-          <img class="movie-poster" src="${Poster}">
-          <div class="movie-info">
-              <div class="movie-antet">
-                  <p class="movie-title">${Title}</p>
-                  <p class="movie-rating">${imdbRating}</p>
-              </div>
-              <div class="extra-info">
-                  <p class="movie-runtime">${Runtime}</p>
-                  <p class="movie-genre">${Genre}</p>
-                  <div id="add-icon-container">
-                     <button>+ Watchlist</button>
-                  </div>
-              </div>
-              <p class="movie-plot">${Plot}</p>
+        <div class="movie-header">
+          <button class="movie-poster js-open-modal" data-movie="${imdbID}">
+            <img src="${
+              Poster !== "N/A" ? Poster : `../assets/images/image-fallback.png`
+            }" 
+            alt="${Title}" title="${Title}" width="275" height="250">
+          </button>
+        </div>
+        
+        <div class="movie-body">
+          <h2 class="movie-title">${Title}</h2>
+          <div class="movie-info-container">
+            <span class="movie-year">${Year} •</span>
+            <span class="movie-runtime">${Runtime} •</span>
+            <span class="movie-genre">${Genre}</span>
           </div>
+
+          <div class="movie-rating">
+            <img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="Movie rating star icon">
+            <span>${imdbRating}</span>
+          </div>											
+            
+          <div class="movie-buttons-container">
+            <button class="add-to-watchlist-btn js-add-to-watchlist" data-movie="${imdbID}">
+              <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
+              <span>Watchlist</span>
+            </button>
+            <button class="movie-info-btn js-open-modal" data-movie="${imdbID}">
+              <span>i</span>
+            </button>
+          </div>
+        </div>
       </div>
     `;
   }
@@ -87,9 +122,9 @@ class MovieSearch {
   // Displays an error message in the UI.
   displayError(message) {
     this.movieListContainer.innerHTML = `
-        <div class="error-container">
-            <p class="error-message">${message}</p>
-        </div>`;
+      <div class="error-container">
+          <p class="error-message">${message}</p>
+      </div>`;
   }
 }
 
