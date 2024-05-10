@@ -1,0 +1,148 @@
+// Disable page scroll when modal is open
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+.movie-modal {
+  padding: 30px 30px 20px 24px;
+  max-width: 360px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+ 
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 400px) {
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 500px;
+  }
+
+  @media screen and (min-width: 992px) {
+    max-width: 630px;
+  }
+}
+
+.modal {
+  &-wrapper {
+    position: relative;
+    
+    .close-modal-btn {
+      position: absolute;
+      top: -28px;
+      right: -28px;
+      background-color: transparent;
+      border: none;
+
+      &:hover,
+      &:active {
+       path {
+        stroke: $primary;
+       }
+      }
+
+      @media screen and (min-width: 400px) {
+        top: -24px;
+        right: -24px;
+      }
+
+      @media screen and (min-width: 992px) {
+        top: -20px;
+        right: -18px;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    gap: 16px;
+
+    .movie-img-wrapper {
+      img {
+        object-fit: cover;
+        border-radius: 6px;
+
+        @media screen and (min-width: 768px) {
+          width: 85px;
+        }  
+      }
+    }
+
+    .header-info-container {
+      display: flex;
+      flex-direction: column;
+      font-size: $font-size-sm;
+
+      @media screen and (min-width: 992px) {
+        font-size: $font-size-base;
+        gap: 7px;
+      }
+
+      h2 {
+        font-size: $font-size-base;
+
+        @media screen and (min-width: 992px) {
+          font-size: $font-size-md;
+        }
+      }
+
+      & > p {
+        margin-top: 8px;
+      }
+    }
+
+    .rating, 
+    .info-container {
+      margin-top: 8px;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+
+  &-body {
+    margin-top: 16px;
+
+    span {
+      font-weight: $font-weight-bold;
+    }
+
+    p {
+      margin-bottom: 14px;
+    }
+
+    button {
+      font-weight: $font-weight-bold;
+      color: $primary;
+      background-color: transparent;
+      border: 2px solid $primary;
+      margin-top: 20px;
+  
+      &:hover,
+      &:active {
+        background-color: lighten($primary, 32%);
+      }
+    }
+
+    .add-to-watchlist-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 32px;
+      border-radius: 8px;
+  
+      span {
+        font-size: $font-size-xs;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

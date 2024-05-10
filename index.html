@@ -35,39 +35,87 @@
 			</section>
 			<section class="movie-list">
 				<div class="container movie-list-container">
-					<!-- <div class="movie-item" id="tt8633478">
+					<!-- Movie Item Card -->
+					<div class="movie-item" id="tt8633478">
 						<div class="movie-header">
-							<button class="movie-poster js-open-modal" data-movie="tt8633478">
+							<button class="movie-poster js-open-modal-btn" data-movie="tt8633478">
 								<img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="Star Wars: Episode V - The Empire Strikes Back" width="275" height="250">
-								</button>
+							</button>
+						</div>
+						<div class="movie-body">
+								<h2 class="movie-title">Star Wars: Episode V - The Empire Strikes Back</h2>
+								<div class="movie-info-container">
+									<span class="movie-year">1980 •</span>
+									<span class="movie-runtime">124 min •</span>
+									<span class="movie-genre">Action, Adventure, Fantasy</span>
 								</div>
-									<div class="movie-body">
-											<h2 class="movie-title">Star Wars: Episode V - The Empire Strikes Back</h2>
-											<div class="movie-info-container">
-												<span class="movie-year">1980 •</span>
-												<span class="movie-runtime">124 min •</span>
-												<span class="movie-genre">Action, Adventure, Fantasy</span>
-											</div>
 
-											<div class="movie-rating">
-												<img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="">
-												<span>8.7</span>
-											</div>											
-											
-											<div class="movie-buttons-container">
-												<button class="add-to-watchlist-btn js-add-to-watchlist" data-movie="tt8633478">
-													<img class="icon" src="../assets/icons/plus-icon.svg" alt="">
-													<span>Watchlist</span>
-												</button>
-												<button class="movie-info-btn js-open-modal" data-movie="tt8633478">
-													<span>i</span>
-												</button>
-											</div>
+								<div class="movie-rating">
+									<img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="">
+									<span>8.7</span>
+								</div>											
+								
+								<div class="movie-buttons-container">
+									<button class="add-to-watchlist-btn js-add-to-watchlist" data-movie="tt8633478">
+										<img class="icon" src="../assets/icons/plus-icon.svg" alt="">
+										<span>Watchlist</span>
+									</button>
+									<button class="movie-info-btn js-open-modal-btn" data-movie="tt8633478">
+										<span>i</span>
+									</button>
+								</div>
+						</div>
+						<!-- START Movie Info Modal -->
+						<dialog class="movie-modal" data-modal="tt8633478">
+							<div class="modal-wrapper">
+								<button class="close-modal-btn js-close-modal-btn">
+									<svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g clip-path="url(#clip0_429_11083)">
+											<path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#282828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</g>
+										<defs>
+											<clipPath id="clip0_429_11083">
+												<rect width="24" height="24" fill="white"/>
+											</clipPath>
+										</defs>
+									</svg>
+								</button>
+								<div class="modal-header">
+									<div class="movie-img-wrapper">
+										<img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="Star Wars: Episode V - The Empire Strikes Back" width="120" height="156">
+									</div>
+									<div class="header-info-container">
+										<h2>Star Wars: Episode V - The Empire Strikes Back</h2>
+										<div class="info-container">
+											<span>1980 •</span>
+											<span>124 min •</span>
+											<span>PG-13</span>					
+										</div>
+										<p>Action, Adventure, Fantasy</p>
+										<div class="rating">
+											<img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="">
+											<span>8.7/10</span>
+										</div>			
 									</div>
 								</div>
+								<div class="modal-body">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<p><span>Director:</span> George Lucas</p>
+									<p><span>Actors:</span> Lorem Ipsum</p>
+									<p><span>Awards:</span> Lorem Ipsum, Lorem Ipsum</p>
+
+									<button class="add-to-watchlist-btn js-add-to-watchlist" data-movie="tt8633478">
+										<img class="icon" src="../assets/icons/plus-icon.svg" alt="">
+										<span>Watchlist</span>
+									</button>
+								</div>
 							</div>
-						</section>   -->
-				</main>
+						</dialog> 
+						<!-- END Movie Info Modal -->		
+					</div>
+				</div>
+			</section>
+		</main>
 		<footer></footer>
 		<script src="../js/index.js" type="module"></script>
 	</body>
