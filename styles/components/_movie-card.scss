@@ -7,6 +7,17 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 2px 5px 28px -6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (min-width: 992px) {
+      &:hover {
+        transform: scale(1.01);
+
+        .movie-poster img {
+          filter: brightness(80%);
+        }
+      }
+    }
   }    
 
   &-poster {
@@ -24,7 +35,7 @@
       width: 100%;
       height: 35%;
       position: absolute;
-      bottom: 0; 
+      bottom: -2px; 
     }
 
     img {
@@ -32,6 +43,7 @@
       height: 275px;
       object-fit: cover;
       object-position: top center;
+      transition: all 0.3s ease-in-out;  
     }
   }
 
