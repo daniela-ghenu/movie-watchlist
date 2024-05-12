@@ -127,7 +127,8 @@ body:has(dialog[open]) {
       margin-top: 20px;
   
       &:hover,
-      &:active {
+      &:active,
+      &:focus {
         background-color: lighten($primary, 32%);
       }
     }
