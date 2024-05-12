@@ -212,6 +212,9 @@ h5 {
 }
 
 .movie-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   width: 300px;
   margin: auto;
   border-radius: 16px;
@@ -284,7 +287,8 @@ h5 {
 .movie-buttons-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: auto;
+  padding: 10px 20px 20px;
 }
 .movie-buttons-container button {
   font-weight: 700;
@@ -428,7 +432,7 @@ body:has(dialog[open]) {
   border: 2px solid #ef4873;
   margin-top: 20px;
 }
-.modal-body button:hover, .modal-body button:active {
+.modal-body button:hover, .modal-body button:active, .modal-body button:focus {
   background-color: #fcdee6;
 }
 .modal-body .add-to-watchlist-btn {

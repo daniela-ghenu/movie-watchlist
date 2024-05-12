@@ -66,13 +66,11 @@ class MovieSearch {
       Title,
       Poster,
       Year,
-      Released,
       imdbRating,
       imdbID,
       Runtime,
       Genre,
       Plot,
-      Language,
       Director,
       Actors,
       Awards,
@@ -84,7 +82,7 @@ class MovieSearch {
     return `
       <div class="movie-item" id="${imdbID}">
         <div class="movie-header">
-          <button class="movie-poster js-open-modal" data-movie="${imdbID}">
+          <button class="movie-poster js-open-modal-btn" data-movie="${imdbID}">
             <img src="${
               Poster !== "N/A" ? Poster : `../assets/images/image-fallback.png`
             }" 
@@ -104,17 +102,66 @@ class MovieSearch {
             <img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="Movie rating star icon">
             <span>${imdbRating}</span>
           </div>											
-            
-          <div class="movie-buttons-container">
-            <button class="add-to-watchlist-btn js-add-to-watchlist" data-movie="${imdbID}">
-              <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
-              <span>Watchlist</span>
-            </button>
-            <button class="movie-info-btn js-open-modal" data-movie="${imdbID}">
-              <span>i</span>
-            </button>
-          </div>
         </div>
+        <div class="movie-buttons-container">
+          <button class="add-to-watchlist-btn js-add-to-watchlist-btn" data-movie="${imdbID}">
+            <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
+            <span>Watchlist</span>
+          </button>
+          <button class="movie-info-btn js-open-modal-btn" data-movie="${imdbID}">
+            <span>i</span>
+          </button>
+        </div>
+
+        <dialog class="movie-modal" data-modal="${imdbID}">
+          <div class="modal-wrapper">
+            <button class="close-modal-btn js-close-modal-btn">
+              <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_429_11083)">
+                  <path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#282828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_429_11083">
+                    <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+            <div class="modal-header">
+              <div class="movie-img-wrapper">
+                <img src="${
+                  Poster !== "N/A"
+                    ? Poster
+                    : `../assets/images/image-fallback.png`
+                }" width="120" height="156">
+              </div>
+              <div class="header-info-container">
+                <h2>${Title}</h2>
+                <div class="info-container">
+                  <span>${Year} •</span>
+                  <span>${Runtime} •</span>
+                  <span>PG-13</span>					
+                </div>
+                <p>${Genre}</p>
+                <div class="rating">
+                  <img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="Movie rating star icon">
+                  <span>${imdbRating}/10</span>
+                </div>			
+              </div>
+            </div>
+            <div class="modal-body">
+              <p>${Plot}</p>
+              <p><span>Director:</span> ${Director}</p>
+              <p><span>Actors:</span> ${Actors}</p>
+              <p><span>Awards:</span> ${Awards}</p>
+
+              <button class="add-to-watchlist-btn js-add-to-watchlist-btn" data-movie="${imdbID}">
+                <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
+                <span>Watchlist</span>
+              </button>
+            </div>
+          </div>
+        </dialog> 
       </div>
     `;
   }
