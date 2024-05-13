@@ -1,4 +1,2 @@
-import MovieSearch from "./MovieSearch.js";
-const movieSearch = new MovieSearch();
-
+import "./movie-search.js";
 import "./handle-modal-info.js";
