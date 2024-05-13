@@ -36,8 +36,8 @@ async function fetchMovies(searchQuery) {
     const movies = await Promise.all(
       data.Search.map((movie) => fetchMovieDetails(movie.Title))
     );
-    console.log(movies);
-    return movies;
+    // Remove duplicate movie items
+    return removeDuplicateMovies(movies);
   } catch (error) {
     return { error: "We were unable to find your movie..." };
   }
@@ -47,6 +47,23 @@ async function fetchMovies(searchQuery) {
 async function fetchMovieDetails(title) {
   const response = await fetch(`${API_URL}?apikey=${API_KEY}&t=${title}`);
   return response.json();
+}
+
+function removeDuplicateMovies(movies) {
+  const uniqueMovies = [];
+
+  // Check if the movie item already exists in uniqueMovies
+  movies.forEach((movie) => {
+    if (!uniqueMovies.some((movieItem) => isEqual(movieItem, movie))) {
+      uniqueMovies.push(movie);
+    }
+  });
+
+  return uniqueMovies;
+}
+
+function isEqual(movieItem, movie) {
+  return JSON.stringify(movieItem) === JSON.stringify(movie);
 }
 
 // Renders the list of movies to the UI.
