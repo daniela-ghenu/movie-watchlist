@@ -486,7 +486,7 @@ footer {
   }
 }
 
-.movie-list-container {
+.movie-list .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 35px;
@@ -495,13 +495,13 @@ footer {
   padding: 32px 0;
 }
 @media screen and (min-width: 768px) {
-  .movie-list-container {
+  .movie-list .container {
     padding: 64px 0;
     max-width: 650px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .movie-list-container {
+  .movie-list .container {
     padding: 64px 0;
     max-width: 992px;
   }

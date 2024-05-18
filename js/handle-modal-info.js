@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Wait for movies to be loaded
   document.addEventListener("moviesLoaded", () => {
-    const movieListContainer = document.querySelector(".movie-list-container");
-    movieListContainer?.addEventListener("click", handleModalInteractions);
+    const movieList = document.querySelector(".movie-list");
+    movieList?.addEventListener("click", handleModalInteractions);
   });
 });
 
