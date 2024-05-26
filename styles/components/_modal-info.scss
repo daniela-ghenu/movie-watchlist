@@ -28,124 +28,121 @@ body:has(dialog[open]) {
   }
 }
 
-.modal {
-  &-wrapper {
-    position: relative;
-    
-    .close-modal-btn {
-      position: absolute;
-      top: -28px;
-      right: -28px;
-      background-color: transparent;
-      border: none;
 
-      &:hover,
-      &:active {
-       path {
-        stroke: $primary;
-       }
-      }
+.modal-wrapper {
+  position: relative;
+  
+  .close-modal-btn {
+    position: absolute;
+    top: -28px;
+    right: -28px;
+    background-color: transparent;
+    border: none;
 
-      @media screen and (min-width: 400px) {
-        top: -24px;
-        right: -24px;
+    &:hover,
+    &:active {
+      path {
+      stroke: $primary;
       }
+    }
 
-      @media screen and (min-width: 992px) {
-        top: -20px;
-        right: -18px;
-      }
+    @media screen and (min-width: 400px) {
+      top: -24px;
+      right: -24px;
+    }
+
+    @media screen and (min-width: 992px) {
+      top: -20px;
+      right: -18px;
     }
   }
+}
 
-  &-header {
+.modal-header {
+  display: flex;
+  gap: 16px;
+
+  .movie-img {
+    object-fit: cover;
+    border-radius: 6px;
+    width: 85px;
+    height: 100%;
+
+    @media screen and (min-width: 768px) {
+      width: 85px;
+    }  
+  }
+
+  .header-info-container {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    font-size: $font-size-sm;
 
-    .movie-img-wrapper {
-      img {
-        object-fit: cover;
-        border-radius: 6px;
-        width: 85px;
-        height: 100%;
-
-        @media screen and (min-width: 768px) {
-          width: 85px;
-        }  
-      }
+    @media screen and (min-width: 992px) {
+      font-size: $font-size-base;
+      gap: 7px;
     }
 
-    .header-info-container {
-      display: flex;
-      flex-direction: column;
-      font-size: $font-size-sm;
+    h2 {
+      font-size: $font-size-base;
 
       @media screen and (min-width: 992px) {
-        font-size: $font-size-base;
-        gap: 7px;
-      }
-
-      h2 {
-        font-size: $font-size-base;
-
-        @media screen and (min-width: 992px) {
-          font-size: $font-size-md;
-        }
-      }
-
-      & > p {
-        margin-top: 8px;
+        font-size: $font-size-md;
       }
     }
 
-    .rating, 
-    .info-container {
+    & > p {
       margin-top: 8px;
     }
+  }
 
-    .rating {
-      display: flex;
-      align-items: center;
-      gap: 5px;
+  .rating, 
+  .info-container {
+    margin-top: 8px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.modal-body {
+  margin-top: 16px;
+
+  span {
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    margin-bottom: 14px;
+  }
+
+  button {
+    font-weight: $font-weight-bold;
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
+    margin-top: 20px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($primary, 32%);
     }
   }
 
-  &-body {
-    margin-top: 16px;
+  .add-to-watchlist-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 32px;
+    border-radius: 8px;
 
     span {
-      font-weight: $font-weight-bold;
-    }
-
-    p {
-      margin-bottom: 14px;
-    }
-
-    button {
-      font-weight: $font-weight-bold;
-      color: $primary;
-      background-color: transparent;
-      border: 2px solid $primary;
-      margin-top: 20px;
-  
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: lighten($primary, 32%);
-      }
-    }
-
-    .add-to-watchlist-btn {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 6px 32px;
-      border-radius: 8px;
-  
-      span {
-        font-size: $font-size-xs;
-        text-transform: uppercase;
-      }
+      font-size: $font-size-xs;
+      text-transform: uppercase;
     }
   }
 }

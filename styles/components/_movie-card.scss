@@ -1,128 +1,126 @@
 @use "../abstracts/variables";
 
-.movie {
-  &-item {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 300px;
-    margin: auto;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 2px 5px 28px -6px rgba(0,0,0,0.2);
-    transition: all 0.3s ease-in-out;
+.movie-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 300px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 2px 5px 28px -6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease-in-out;
 
-    @media screen and (min-width: 992px) {
-      &:hover {
-        transform: scale(1.01);
+  @media screen and (min-width: 992px) {
+    &:hover {
+      transform: scale(1.01);
 
-        .movie-poster img {
-          filter: brightness(80%);
-        }
+      .movie-poster img {
+        filter: brightness(80%);
       }
     }
-  }    
+  }
+}    
 
-  &-poster {
-    display: flex;
-    position: relative;
-    background: transparent;
-    border: none;
-    padding: 0;
+.movie-poster {
+  display: flex;
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 0;
+  width: 100%;
+
+  &:after {
+    content: "";
+    display: block;
+    background: $bg-gradient-light;
     width: 100%;
-
-    &:after {
-      content: "";
-      display: block;
-      background: $bg-gradient-light;
-      width: 100%;
-      height: 35%;
-      position: absolute;
-      bottom: -2px; 
-    }
-
-    img {
-      width: 100%;
-      height: 275px;
-      object-fit: cover;
-      object-position: top center;
-      transition: all 0.3s ease-in-out;  
-    }
+    height: 35%;
+    position: absolute;
+    bottom: -2px; 
   }
 
-  &-body {
-    padding: 10px 20px 20px;
+  img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 0.3s ease-in-out;  
   }
+}
+
+.movie-body {
+  padding: 10px 20px 20px;
+}
   
-  &-title {
-    font-size: $font-size-base;
-    font-weight: $font-weight-semibold;
+.movie-title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+}
+
+.movie-info-container {
+  margin-top: 4px;
+
+  span {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $gray;
+  }
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+
+  img {
+    width: 16px;
+    height: 16px;
   }
 
-  &-info-container {
-    margin-top: 4px;
+  span {
+    font-size: $font-size-xs;
+    font-weight: $font-weight-medium;
+    color: $gray;
+  }
+}
 
-    span {
-      font-size: $font-size-xs;
-      font-weight: $font-weight-medium;
-      color: $gray;
+.movie-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 10px 20px 20px;
+
+  button {
+    font-weight: $font-weight-bold;
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: lighten($primary, 32%);
     }
   }
 
-  &-rating {
+  .add-to-watchlist-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
-    margin-top: 10px;
-
-    img {
-      width: 16px;
-      height: 16px;
-    }
+    gap: 4px;
+    padding: 2px 20px;
+    border-radius: 8px;
 
     span {
-      font-size: $font-size-xs;
-      font-weight: $font-weight-medium;
-      color: $gray;
+      font-size: $font-size-xxs;
+      text-transform: uppercase;
     }
   }
+}
 
-  &-buttons-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-    padding: 10px 20px 20px;
-
-    button {
-      font-weight: $font-weight-bold;
-      color: $primary;
-      background-color: transparent;
-      border: 2px solid $primary;
-  
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: lighten($primary, 32%);
-      }
-    }
-
-    .add-to-watchlist-btn {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      padding: 2px 20px;
-      border-radius: 8px;
-  
-      span {
-        font-size: $font-size-xxs;
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  &-info-btn {
-    font-size: $font-size-base;
-    padding: 5px 12px;
-    border-radius: 50px;
-  }
+.movie-info-btn {
+  font-size: $font-size-base;
+  padding: 5px 12px;
+  border-radius: 50px;
 }

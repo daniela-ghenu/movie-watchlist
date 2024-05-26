@@ -112,6 +112,25 @@ h5 {
   background-size: cover;
   color: #ffffff;
 }
+@media screen and (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+}
+.hero p {
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+@media screen and (min-width: 576px) {
+  .hero p {
+    font-size: 1.25rem;
+  }
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
@@ -142,25 +161,8 @@ h5 {
     min-height: 400px;
   }
 }
-@media screen and (max-width: 992px) {
-  .hero h1 {
-    font-size: 2.25rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.75rem;
-  }
-}
-.hero p {
-  text-shadow: 0px 0px 10px rgb(0, 0, 0);
-}
-@media screen and (min-width: 576px) {
-  .hero p {
-    font-size: 1.25rem;
-  }
-}
-.hero .search-form {
+
+.search-form {
   display: flex;
   width: min(100%, 650px);
   border-radius: 50px;
@@ -169,30 +171,33 @@ h5 {
   overflow: hidden;
 }
 @media screen and (max-width: 576px) {
-  .hero .search-form {
+  .search-form {
     margin-top: 16px;
   }
 }
-.hero .search-icon {
+
+.search-icon {
   display: flex;
   align-items: center;
   padding-left: 16px;
 }
-.hero .search-input {
+
+.search-input {
   padding: 10px 8px 10px 10px;
   border: none;
   width: 90%;
 }
 @media screen and (min-width: 400px) {
-  .hero .search-input[type=text] {
+  .search-input[type=text] {
     font-size: 1rem;
-    color: grey;
+    color: #4f4b4b;
   }
 }
-.hero .search-input:focus {
+.search-input:focus {
   outline: 0;
 }
-.hero .search-button {
+
+.search-button {
   border: none;
   border-radius: 50px;
   padding: 0px 14px;
@@ -203,11 +208,11 @@ h5 {
   transition: background-color 0.2s ease-in-out;
 }
 @media screen and (min-width: 576px) {
-  .hero .search-button {
+  .search-button {
     padding: 0px 20px;
   }
 }
-.hero .search-button:hover, .hero .search-button:focus {
+.search-button:hover, .search-button:focus {
   background-color: #ec2256;
 }
 
@@ -220,7 +225,7 @@ h5 {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 2px 5px 28px -6px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 @media screen and (min-width: 992px) {
   .movie-item:hover {
@@ -230,6 +235,7 @@ h5 {
     filter: brightness(80%);
   }
 }
+
 .movie-poster {
   display: flex;
   position: relative;
@@ -254,13 +260,16 @@ h5 {
   object-position: top center;
   transition: all 0.3s ease-in-out;
 }
+
 .movie-body {
   padding: 10px 20px 20px;
 }
+
 .movie-title {
   font-size: 1rem;
   font-weight: 600;
 }
+
 .movie-info-container {
   margin-top: 4px;
 }
@@ -269,6 +278,7 @@ h5 {
   font-weight: 500;
   color: #4f4b4b;
 }
+
 .movie-rating {
   display: flex;
   align-items: center;
@@ -284,6 +294,7 @@ h5 {
   font-weight: 500;
   color: #4f4b4b;
 }
+
 .movie-buttons-container {
   display: flex;
   justify-content: space-between;
@@ -310,6 +321,7 @@ h5 {
   font-size: 0.75rem;
   text-transform: uppercase;
 }
+
 .movie-info-btn {
   font-size: 1rem;
   padding: 5px 12px;
@@ -372,18 +384,19 @@ body:has(dialog[open]) {
     right: -18px;
   }
 }
+
 .modal-header {
   display: flex;
   gap: 16px;
 }
-.modal-header .movie-img-wrapper img {
+.modal-header .movie-img {
   object-fit: cover;
   border-radius: 6px;
   width: 85px;
   height: 100%;
 }
 @media screen and (min-width: 768px) {
-  .modal-header .movie-img-wrapper img {
+  .modal-header .movie-img {
     width: 85px;
   }
 }
@@ -418,6 +431,7 @@ body:has(dialog[open]) {
   align-items: center;
   gap: 5px;
 }
+
 .modal-body {
   margin-top: 16px;
 }
