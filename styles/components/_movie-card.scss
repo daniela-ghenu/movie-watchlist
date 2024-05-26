@@ -10,6 +10,9 @@
   overflow: hidden;
   box-shadow: 2px 5px 28px -6px rgba(0,0,0,0.2);
   transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media screen and (min-width: 992px) {
     &:hover {
