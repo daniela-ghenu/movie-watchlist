@@ -97,7 +97,21 @@ function createMovieTemplate(movie) {
   if (!imdbID) return;
 
   return `
-    <div class="movie-item" id="${imdbID}">
+    <div class="movie-item" 
+      data-id="${imdbID}"
+      data-title="${Title}"
+      data-poster=${
+        Poster !== "N/A" ? Poster : `../assets/images/image-fallback.png`
+      }"
+      data-year="${Year}"
+      data-runtime="${Runtime}"
+      data-genre="${Genre}"
+      data-rating="${imdbRating}"
+      data-rated="${Rated}"
+      data-director="${Director}"
+      data-actors="${Actors}"
+      data-awards="${Awards}"
+    >
       <div class="movie-header">
         <button class="movie-poster js-open-modal-btn" data-movie="${imdbID}">
           <img src="${
@@ -130,7 +144,7 @@ function createMovieTemplate(movie) {
         </button>
       </div>
 
-      <dialog class="movie-modal" data-modal="${imdbID}">
+      <dialog class="movie-modal">
         <div class="modal-wrapper">
           <button class="close-modal-btn js-close-modal-btn">
             <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +160,7 @@ function createMovieTemplate(movie) {
           </button>
           <div class="modal-header">
             <div class="movie-img-wrapper">
-              <img src="${
+              <img class="movie-img" src="${
                 Poster !== "N/A"
                   ? Poster
                   : `../assets/images/image-fallback.png`
@@ -167,12 +181,12 @@ function createMovieTemplate(movie) {
             </div>
           </div>
           <div class="modal-body">
-            <p>${Plot}</p>
+            <p class="movie-plot">${Plot}</p>
             <p><span>Director:</span> ${Director}</p>
             <p><span>Actors:</span> ${Actors}</p>
             <p><span>Awards:</span> ${Awards}</p>
 
-            <button class="add-to-watchlist-btn js-add-to-watchlist-btn" data-movie="${imdbID}">
+            <button class="add-to-watchlist-btn js-add-to-watchlist-btn">
               <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
               <span>Watchlist</span>
             </button>

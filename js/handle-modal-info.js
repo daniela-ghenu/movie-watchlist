@@ -1,10 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Wait for movies to be loaded
-  document.addEventListener("moviesLoaded", () => {
-    const movieList = document.querySelector(".movie-list");
-    movieList?.addEventListener("click", handleModalInteractions);
-  });
-});
+const movieList = document.querySelector(".movie-list");
+movieList?.addEventListener("click", handleModalInteractions);
 
 function handleModalInteractions(e) {
   const movieItem = e.target.closest(".movie-item");
