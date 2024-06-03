@@ -311,14 +311,17 @@ h5 {
 .movie-buttons-container button:hover, .movie-buttons-container button:active {
   background-color: #fcdee6;
 }
-.movie-buttons-container .add-to-watchlist-btn {
+.movie-buttons-container .toggle-watchlist-btn {
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 2px 20px;
   border-radius: 8px;
 }
-.movie-buttons-container .add-to-watchlist-btn span {
+.movie-buttons-container .toggle-watchlist-btn.is-added {
+  background-color: #fcdee6;
+}
+.movie-buttons-container .toggle-watchlist-btn span {
   font-size: 0.75rem;
   text-transform: uppercase;
 }
@@ -452,14 +455,17 @@ body:has(dialog[open]) {
 .modal-body button:hover, .modal-body button:active, .modal-body button:focus {
   background-color: #fcdee6;
 }
-.modal-body .add-to-watchlist-btn {
+.modal-body .toggle-watchlist-btn {
   display: flex;
   align-items: center;
   gap: 4px;
   padding: 6px 32px;
   border-radius: 8px;
 }
-.modal-body .add-to-watchlist-btn span {
+.modal-body .toggle-watchlist-btn.is-added {
+  background-color: #fcdee6;
+}
+.modal-body .toggle-watchlist-btn span {
   font-size: 0.813rem;
   text-transform: uppercase;
 }

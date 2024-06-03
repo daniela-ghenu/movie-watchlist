@@ -107,12 +107,16 @@
     }
   }
 
-  .add-to-watchlist-btn {
+  .toggle-watchlist-btn {
     display: flex;
     align-items: center;
     gap: 4px;
     padding: 2px 20px;
     border-radius: 8px;
+
+    &.is-added {
+      background-color: lighten($primary, 32%);
+    }
 
     span {
       font-size: $font-size-xxs;

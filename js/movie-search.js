@@ -1,3 +1,5 @@
+import {getWatchlist, saveWatchlist, updateSearchedMoviesUI} from './utils.js';
+
 const API_KEY = "fb9fa955";
 const API_URL = "http://www.omdbapi.com/";
 
@@ -70,10 +72,7 @@ function isEqual(movieItem, movie) {
 function renderMovies(movies) {
   const moviesHtml = movies.map((movie) => createMovieTemplate(movie)).join("");
   movieListContainer.innerHTML = moviesHtml;
-
-  // Dispatch (trigger) custom event when movies are loaded
-  const moviesLoadedEvent = new Event("moviesLoaded");
-  document.dispatchEvent(moviesLoadedEvent);
+  updateSearchedMoviesUI();
 }
 
 // Generates HTML template for a single movie.
@@ -135,7 +134,7 @@ function createMovieTemplate(movie) {
         </div>											
       </div>
       <div class="movie-buttons-container">
-        <button class="add-to-watchlist-btn js-add-to-watchlist-btn" data-movie="${imdbID}">
+        <button class="toggle-watchlist-btn js-toggle-watchlist" data-movie="${imdbID}">
           <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
           <span>Watchlist</span>
         </button>
@@ -186,7 +185,7 @@ function createMovieTemplate(movie) {
             <p><span>Actors:</span> ${Actors}</p>
             <p><span>Awards:</span> ${Awards}</p>
 
-            <button class="add-to-watchlist-btn js-add-to-watchlist-btn">
+            <button class="toggle-watchlist-btn js-toggle-watchlist" data-movie="${imdbID}">
               <img class="icon" src="../assets/icons/plus-icon.svg" alt="Plus icon">
               <span>Watchlist</span>
             </button>
