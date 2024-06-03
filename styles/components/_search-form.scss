@@ -2,7 +2,7 @@
 
 .search-form {
   display: flex;
-  width: min(100%, 650px);
+  width: min(100%, 670px);
   border-radius: 50px;
   margin-top: 24px;
   background-color: $white;
@@ -20,15 +20,13 @@
 }
 
 .search-input {
-  padding: 10px 8px 10px 10px;
+  padding: 12px 8px 12px 10px;
   border: none;
   width: 90%;
 
-  @media screen and (min-width: 400px) {   
-    &[type="text"] {
-      font-size: $font-size-base;
-      color: $gray;
-    }
+  &[type="text"] {
+    font-size: $font-size-base;
+    color: $gray;
   }
 
   &:focus {
@@ -39,7 +37,7 @@
 .search-button {
   border: none;
   border-radius: 50px;
-  padding: 0px 14px;
+  padding: 0px 16px;
   margin-left: auto;
   font-size: $font-size-base;
   background-color: $primary;
@@ -51,7 +49,7 @@
   }
 
   &:hover,
-  &:focus {
+  &:active {
     background-color: darken($primary, 8%);
   }
 }

@@ -146,7 +146,7 @@ h5 {
 }
 @media screen and (min-width: 768px) {
   .hero-container {
-    min-height: 250px;
+    min-height: 300px;
     max-width: 576px !important;
   }
 }
@@ -164,7 +164,7 @@ h5 {
 
 .search-form {
   display: flex;
-  width: min(100%, 650px);
+  width: min(100%, 670px);
   border-radius: 50px;
   margin-top: 24px;
   background-color: #ffffff;
@@ -183,15 +183,13 @@ h5 {
 }
 
 .search-input {
-  padding: 10px 8px 10px 10px;
+  padding: 12px 8px 12px 10px;
   border: none;
   width: 90%;
 }
-@media screen and (min-width: 400px) {
-  .search-input[type=text] {
-    font-size: 1rem;
-    color: #4f4b4b;
-  }
+.search-input[type=text] {
+  font-size: 1rem;
+  color: #4f4b4b;
 }
 .search-input:focus {
   outline: 0;
@@ -200,7 +198,7 @@ h5 {
 .search-button {
   border: none;
   border-radius: 50px;
-  padding: 0px 14px;
+  padding: 0px 16px;
   margin-left: auto;
   font-size: 1rem;
   background-color: #ef4873;
@@ -212,7 +210,7 @@ h5 {
     padding: 0px 20px;
   }
 }
-.search-button:hover, .search-button:focus {
+.search-button:hover, .search-button:active {
   background-color: #ec2256;
 }
 
@@ -310,7 +308,7 @@ h5 {
   background-color: transparent;
   border: 2px solid #ef4873;
 }
-.movie-buttons-container button:hover, .movie-buttons-container button:active, .movie-buttons-container button:focus {
+.movie-buttons-container button:hover, .movie-buttons-container button:active {
   background-color: #fcdee6;
 }
 .movie-buttons-container .add-to-watchlist-btn {

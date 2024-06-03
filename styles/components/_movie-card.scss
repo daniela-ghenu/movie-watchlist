@@ -102,8 +102,7 @@
     border: 2px solid $primary;
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       background-color: lighten($primary, 32%);
     }
   }
