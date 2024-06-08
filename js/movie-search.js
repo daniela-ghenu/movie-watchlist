@@ -1,4 +1,4 @@
-import {getWatchlist, saveWatchlist, updateSearchedMoviesUI} from './utils.js';
+import {updateSearchedMoviesUI} from './utils.js';
 
 const API_KEY = "fb9fa955";
 const API_URL = "http://www.omdbapi.com/";

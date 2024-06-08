@@ -303,7 +303,14 @@ h5 {
   padding: 10px 20px 20px;
 }
 .movie-buttons-container button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 20px;
+  border-radius: 8px;
+  font-size: 0.75rem;
   font-weight: 700;
+  text-transform: uppercase;
   color: #ef4873;
   background-color: transparent;
   border: 2px solid #ef4873;
@@ -311,23 +318,15 @@ h5 {
 .movie-buttons-container button:hover, .movie-buttons-container button:active {
   background-color: #fcdee6;
 }
-.movie-buttons-container .toggle-watchlist-btn {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 20px;
-  border-radius: 8px;
-}
 .movie-buttons-container .toggle-watchlist-btn.is-added {
   background-color: #fcdee6;
 }
-.movie-buttons-container .toggle-watchlist-btn span {
-  font-size: 0.75rem;
-  text-transform: uppercase;
+.movie-buttons-container .remove-movie-btn {
+  background-color: #fcdee6;
 }
-
-.movie-info-btn {
+.movie-buttons-container .movie-info-btn {
   font-size: 1rem;
+  text-transform: none;
   padding: 5px 12px;
   border-radius: 50px;
 }
@@ -446,28 +445,24 @@ body:has(dialog[open]) {
   margin-bottom: 14px;
 }
 .modal-body button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.813rem;
   font-weight: 700;
+  text-transform: uppercase;
   color: #ef4873;
   background-color: transparent;
+  padding: 6px 32px;
   border: 2px solid #ef4873;
+  border-radius: 8px;
   margin-top: 20px;
 }
 .modal-body button:hover, .modal-body button:active {
   background-color: #fcdee6;
 }
-.modal-body .toggle-watchlist-btn {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 6px 32px;
-  border-radius: 8px;
-}
 .modal-body .toggle-watchlist-btn.is-added {
   background-color: #fcdee6;
-}
-.modal-body .toggle-watchlist-btn span {
-  font-size: 0.813rem;
-  text-transform: uppercase;
 }
 
 body {

@@ -120,10 +120,17 @@ body:has(dialog[open]) {
   }
 
   button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: $font-size-xs;
     font-weight: $font-weight-bold;
+    text-transform: uppercase;
     color: $primary;
     background-color: transparent;
+    padding: 6px 32px;
     border: 2px solid $primary;
+    border-radius: 8px;
     margin-top: 20px;
 
     &:hover,
@@ -133,19 +140,8 @@ body:has(dialog[open]) {
   }
 
   .toggle-watchlist-btn {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 6px 32px;
-    border-radius: 8px;
-    
     &.is-added {
       background-color: lighten($primary, 32%);
-    }
-
-    span {
-      font-size: $font-size-xs;
-      text-transform: uppercase;
     }
   }
 }
