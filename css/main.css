@@ -452,7 +452,7 @@ body:has(dialog[open]) {
   border: 2px solid #ef4873;
   margin-top: 20px;
 }
-.modal-body button:hover, .modal-body button:active, .modal-body button:focus {
+.modal-body button:hover, .modal-body button:active {
   background-color: #fcdee6;
 }
 .modal-body .toggle-watchlist-btn {
