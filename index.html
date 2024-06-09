@@ -10,8 +10,36 @@
 	</head>
 	<body>
 		<header>
-			<nav>
-				<a href="/watchlist.html">Watchlist</a>
+			<nav class="navbar">
+				<div class="container">
+					<a href="/" class="navbar-brand navbar-link">
+						<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)">
+							<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+							<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+							<g id="SVGRepo_iconCarrier"> <path d="M21 21L15.0001 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#ffffff" stroke-width="1.968" stroke-linecap="round" stroke-linejoin="round"/> </g>
+							</svg>
+						<span>Search Page</span>
+					</a>
+					<button class="navbar-toggler" type="button">
+						<span class="sr-only">Toggle Menu</span>
+					</button>
+					<div class="navbar-menu">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="navbar-link" href="/watchlist.html">
+									<svg width="25px" height="25px" viewBox="0 0 22) 22" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="1.344">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+										<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+										<g id="SVGRepo_iconCarrier">
+										<path d="M10 10.5H14M12 8.5V12.5M8.25 5H15.75C16.4404 5 17 5.58763 17 6.3125V19L12 15.5L7 19V6.3125C7 5.58763 7.55964 5 8.25 5Z" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+										</g>
+										</svg>
+									<span>Watchlist</span>
+								</a>
+							</li>
+						</ul>
+				</div>  
+				</div>  
 			</nav>
 		</header>
 		<main>
@@ -32,91 +60,12 @@
 							name="search-input" 
 							type="text" 
 							placeholder="Search your favorite movie...">
-		
 						<button class="search-button" type="submit" aria-label="Submit Search">Search</button>
 					</form>
 				</div>
 			</section>
 			<section class="movie-list">
-				<div class="container movie-list-container">
-					<!-- Movie Item Card -->
-					<div class="movie-item" id="tt8633478">
-						<div class="movie-header">
-							<button class="movie-poster js-open-modal-btn" data-movie="tt8633478">
-								<img src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="Star Wars: Episode V - The Empire Strikes Back" width="275" height="250">
-							</button>
-						</div>
-						<div class="movie-body">
-								<h2 class="movie-title">Star Wars: Episode V - The Empire Strikes Back</h2>
-								<div class="movie-info-container">
-									<span class="movie-year">1980 •</span>
-									<span class="movie-runtime">124 min •</span>
-									<span class="movie-genre">Action, Adventure, Fantasy</span>
-								</div>
-
-								<div class="movie-rating">
-									<img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="">
-									<span>8.7</span>
-								</div>											
-						</div>
-						<div class="movie-buttons-container">
-							<button class="toggle-watchlist-btn js-toggle-watchlist" data-movie="tt8633478">
-								<img class="icon" src="../assets/icons/plus-icon.svg" alt="">
-								<span>Watchlist</span>
-							</button>
-							<button class="movie-info-btn js-open-modal-btn" data-movie="tt8633478">
-								<span>i</span>
-							</button>
-						</div>
-						<!-- START Movie Info Modal -->
-						<dialog class="movie-modal" data-modal="tt8633478">
-							<div class="modal-wrapper">
-								<button class="close-modal-btn js-close-modal-btn">
-									<svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<g clip-path="url(#clip0_429_11083)">
-											<path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#282828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-										</g>
-										<defs>
-											<clipPath id="clip0_429_11083">
-												<rect width="24" height="24" fill="white"/>
-											</clipPath>
-										</defs>
-									</svg>
-								</button>
-								<div class="modal-header">
-									<div class="movie-img-wrapper">
-										<img class="movie-img" src="https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="Star Wars: Episode V - The Empire Strikes Back" width="120" height="156">
-									</div>
-									<div class="header-info-container">
-										<h2>Star Wars: Episode V - The Empire Strikes Back</h2>
-										<div class="info-container">
-											<span>1980 •</span>
-											<span>124 min •</span>
-											<span>PG-13</span>					
-										</div>
-										<p>Action, Adventure, Fantasy</p>
-										<div class="rating">
-											<img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="">
-											<span>8.7/10</span>
-										</div>			
-									</div>
-								</div>
-								<div class="modal-body">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-									<p><span>Director:</span> George Lucas</p>
-									<p><span>Actors:</span> Lorem Ipsum</p>
-									<p><span>Awards:</span> Lorem Ipsum, Lorem Ipsum</p>
-
-									<button class="toggle-watchlist-btn js-toggle-watchlist" data-movie="tt8633478">
-										<img class="icon" src="../assets/icons/plus-icon.svg" alt="">
-										<span>Watchlist</span>
-									</button>
-								</div>
-							</div>
-						</dialog> 
-						<!-- END Movie Info Modal -->		
-					</div>
-				</div>
+				<div class="container movie-list-container"></div>	
 			</section>
 		</main>
 		<footer></footer>

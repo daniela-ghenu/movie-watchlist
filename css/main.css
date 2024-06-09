@@ -157,13 +157,11 @@ h5 {
 @media screen and (min-width: 768px) {
   .hero-container {
     min-height: 300px;
-    max-width: 576px !important;
   }
 }
 @media screen and (min-width: 992px) {
   .hero-container {
     min-height: 300px;
-    max-width: 768px !important;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -174,7 +172,7 @@ h5 {
 
 .search-form {
   display: flex;
-  width: min(100%, 670px);
+  width: 100%;
   border-radius: 50px;
   margin-top: 24px;
   background-color: #ffffff;
@@ -480,6 +478,81 @@ body {
   text-rendering: optimizespeed;
 }
 
+header {
+  background-color: #050203;
+}
+
+.navbar {
+  position: relative;
+  padding: 18px 24px;
+  transition: background-color 0.2s ease-in;
+}
+@media screen and (max-width: 768px) {
+  .navbar:has(.open) {
+    background-color: #ffffff;
+  }
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar-menu.show {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    display: flex;
+    flex-direction: column;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 32px 0;
+    border-radius: 0 0 16px 16px;
+    border-top: 1px solid #ebeef2;
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
 footer {
   margin-top: auto;
 }
@@ -489,22 +562,22 @@ footer {
 }
 @media screen and (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 520px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 650px;
   }
 }
 @media screen and (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 992px;
   }
 }
 
