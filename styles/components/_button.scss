@@ -1,0 +1,78 @@
+@use "../abstracts/variables";
+
+.movie-buttons-container,
+.modal-body {
+  button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    color: $primary;
+    background-color: transparent;
+    border: 2px solid $primary;
+    border-radius: 8px;
+
+    &:hover,
+    &:active {
+      background-color: lighten($primary, 32%);
+    }
+  }
+
+  .toggle-watchlist-btn {
+    &.is-added {
+      background-color: lighten($primary, 32%);
+    }
+  }
+}
+
+.movie-buttons-container {
+  button {
+    font-size: $font-size-xxs;
+    padding: 2px 20px;
+  }
+
+  .remove-movie-btn {
+    background-color: lighten($primary, 32%);
+  }
+  
+  .movie-info-btn {
+    font-size: $font-size-base;
+    text-transform: none;
+    padding: 5px 12px;
+    border-radius: 50px;
+  }
+}
+
+.modal-body {
+  button {
+    font-size: $font-size-xs;
+    padding: 6px 32px;
+    margin-top: 20px;
+  }
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: -28px;
+  right: -28px;
+  background-color: transparent;
+  border: none;
+
+  &:hover,
+  &:active {
+    path {
+    stroke: $primary;
+    }
+  }
+
+  @media screen and (min-width: 400px) {
+    top: -24px;
+    right: -24px;
+  }
+
+  @media screen and (min-width: 992px) {
+    top: -20px;
+    right: -18px;
+  }
+}

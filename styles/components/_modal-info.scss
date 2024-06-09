@@ -28,34 +28,8 @@ body:has(dialog[open]) {
   }
 }
 
-
 .modal-wrapper {
   position: relative;
-  
-  .close-modal-btn {
-    position: absolute;
-    top: -28px;
-    right: -28px;
-    background-color: transparent;
-    border: none;
-
-    &:hover,
-    &:active {
-      path {
-      stroke: $primary;
-      }
-    }
-
-    @media screen and (min-width: 400px) {
-      top: -24px;
-      right: -24px;
-    }
-
-    @media screen and (min-width: 992px) {
-      top: -20px;
-      right: -18px;
-    }
-  }
 }
 
 .modal-header {
@@ -117,31 +91,5 @@ body:has(dialog[open]) {
 
   p {
     margin-bottom: 14px;
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: $font-size-xs;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    color: $primary;
-    background-color: transparent;
-    padding: 6px 32px;
-    border: 2px solid $primary;
-    border-radius: 8px;
-    margin-top: 20px;
-
-    &:hover,
-    &:active {
-      background-color: lighten($primary, 32%);
-    }
-  }
-
-  .toggle-watchlist-btn {
-    &.is-added {
-      background-color: lighten($primary, 32%);
-    }
   }
 }

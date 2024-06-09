@@ -214,6 +214,71 @@ h5 {
   background-color: #ec2256;
 }
 
+.movie-buttons-container button,
+.modal-body button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ef4873;
+  background-color: transparent;
+  border: 2px solid #ef4873;
+  border-radius: 8px;
+}
+.movie-buttons-container button:hover, .movie-buttons-container button:active,
+.modal-body button:hover,
+.modal-body button:active {
+  background-color: #fcdee6;
+}
+.movie-buttons-container .toggle-watchlist-btn.is-added,
+.modal-body .toggle-watchlist-btn.is-added {
+  background-color: #fcdee6;
+}
+
+.movie-buttons-container button {
+  font-size: 0.75rem;
+  padding: 2px 20px;
+}
+.movie-buttons-container .remove-movie-btn {
+  background-color: #fcdee6;
+}
+.movie-buttons-container .movie-info-btn {
+  font-size: 1rem;
+  text-transform: none;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.modal-body button {
+  font-size: 0.813rem;
+  padding: 6px 32px;
+  margin-top: 20px;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: -28px;
+  right: -28px;
+  background-color: transparent;
+  border: none;
+}
+.close-modal-btn:hover path, .close-modal-btn:active path {
+  stroke: #ef4873;
+}
+@media screen and (min-width: 400px) {
+  .close-modal-btn {
+    top: -24px;
+    right: -24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .close-modal-btn {
+    top: -20px;
+    right: -18px;
+  }
+}
+
 .movie-item {
   display: flex;
   flex-direction: column;
@@ -302,34 +367,6 @@ h5 {
   margin-top: auto;
   padding: 10px 20px 20px;
 }
-.movie-buttons-container button {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 20px;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ef4873;
-  background-color: transparent;
-  border: 2px solid #ef4873;
-}
-.movie-buttons-container button:hover, .movie-buttons-container button:active {
-  background-color: #fcdee6;
-}
-.movie-buttons-container .toggle-watchlist-btn.is-added {
-  background-color: #fcdee6;
-}
-.movie-buttons-container .remove-movie-btn {
-  background-color: #fcdee6;
-}
-.movie-buttons-container .movie-info-btn {
-  font-size: 1rem;
-  text-transform: none;
-  padding: 5px 12px;
-  border-radius: 50px;
-}
 
 body:has(dialog[open]) {
   overflow-y: hidden;
@@ -364,28 +401,6 @@ body:has(dialog[open]) {
 
 .modal-wrapper {
   position: relative;
-}
-.modal-wrapper .close-modal-btn {
-  position: absolute;
-  top: -28px;
-  right: -28px;
-  background-color: transparent;
-  border: none;
-}
-.modal-wrapper .close-modal-btn:hover path, .modal-wrapper .close-modal-btn:active path {
-  stroke: #ef4873;
-}
-@media screen and (min-width: 400px) {
-  .modal-wrapper .close-modal-btn {
-    top: -24px;
-    right: -24px;
-  }
-}
-@media screen and (min-width: 992px) {
-  .modal-wrapper .close-modal-btn {
-    top: -20px;
-    right: -18px;
-  }
 }
 
 .modal-header {
@@ -443,26 +458,6 @@ body:has(dialog[open]) {
 }
 .modal-body p {
   margin-bottom: 14px;
-}
-.modal-body button {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.813rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #ef4873;
-  background-color: transparent;
-  padding: 6px 32px;
-  border: 2px solid #ef4873;
-  border-radius: 8px;
-  margin-top: 20px;
-}
-.modal-body button:hover, .modal-body button:active {
-  background-color: #fcdee6;
-}
-.modal-body .toggle-watchlist-btn.is-added {
-  background-color: #fcdee6;
 }
 
 body {

@@ -94,41 +94,5 @@
   justify-content: space-between;
   margin-top: auto;
   padding: 10px 20px 20px;
-
-  button {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 2px 20px;
-    border-radius: 8px;
-    font-size: $font-size-xxs;
-    font-weight: $font-weight-bold;
-    text-transform: uppercase;
-    color: $primary;
-    background-color: transparent;
-    border: 2px solid $primary;
-
-    &:hover,
-    &:active {
-      background-color: lighten($primary, 32%);
-    }
-  }
-
-  .toggle-watchlist-btn {
-    &.is-added {
-      background-color: lighten($primary, 32%);
-    }
-  }
-
-  .remove-movie-btn {
-    background-color: lighten($primary, 32%);
-  }
-  
-  .movie-info-btn {
-    font-size: $font-size-base;
-    text-transform: none;
-    padding: 5px 12px;
-    border-radius: 50px;
-  }
 }
 
