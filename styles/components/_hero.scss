@@ -24,6 +24,10 @@
     @media screen and (max-width: 768px){
       font-size: $h3-font-size;
     }
+
+    @media screen and (max-width: 500px){
+      font-size: $h4-font-size;
+    }
   }
 
   p {
@@ -38,22 +42,24 @@
 .hero-container {
   @include flex-position(column, center);
   gap: 16px;
-  padding: 48px 24px 32px;
+  padding: 28px 24px 24px;
   
   @media screen and (min-width: 576px){
     padding-left: 0;
     padding-right: 0;
   }
 
-  @media screen and (min-width: 768px){
-    min-height: 300px;
-  }
-
   @media screen and (min-width: 992px){
     min-height: 300px;
+    align-items: center;
   }
 
   @media screen and (min-width: 1800px){
     min-height: 400px;
   }
+}
+
+.heading-container {
+  @include flex-position(column);
+  gap: 16px;
 }

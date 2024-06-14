@@ -107,6 +107,83 @@ h5 {
   font-size: 1.25rem;
 }
 
+.navbar {
+  position: relative;
+  padding: 16px 8px;
+  transition: background-color 0.2s ease-in;
+}
+@media screen and (max-width: 768px) {
+  .navbar:has(.open) {
+    background-color: #ffffff;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navbar {
+    padding: 12px 8px;
+  }
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar a {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu.show {
+    opacity: 1;
+    transition: opacity 0.2s ease-in;
+    display: flex;
+    flex-direction: column;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    padding: 32px 0;
+    border-radius: 0 0 16px 16px;
+    border-top: 1px solid #ebeef2;
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.03);
+    background-color: #ffffff;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+.navbar-link:hover {
+  background-color: #281018;
+}
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(239, 72, 115, 0.3)), url(../../assets/images/hero-image-movie.webp) center center;
   background-size: cover;
@@ -132,6 +209,11 @@ h5 {
     font-size: 1.75rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+}
 .hero p {
   text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
@@ -146,7 +228,7 @@ h5 {
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  padding: 48px 24px 32px;
+  padding: 28px 24px 24px;
 }
 @media screen and (min-width: 576px) {
   .hero-container {
@@ -154,14 +236,10 @@ h5 {
     padding-right: 0;
   }
 }
-@media screen and (min-width: 768px) {
-  .hero-container {
-    min-height: 300px;
-  }
-}
 @media screen and (min-width: 992px) {
   .hero-container {
     min-height: 300px;
+    align-items: center;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -170,9 +248,15 @@ h5 {
   }
 }
 
+.heading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .search-form {
   display: flex;
-  width: 100%;
+  width: min(100%, 675px);
   border-radius: 50px;
   margin-top: 24px;
   background-color: #ffffff;
@@ -482,77 +566,6 @@ header {
   background-color: #050203;
 }
 
-.navbar {
-  position: relative;
-  padding: 18px 24px;
-  transition: background-color 0.2s ease-in;
-}
-@media screen and (max-width: 768px) {
-  .navbar:has(.open) {
-    background-color: #ffffff;
-  }
-}
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar a {
-  font-size: 1rem;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar-menu {
-    position: absolute;
-    opacity: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  .navbar-menu.show {
-    opacity: 1;
-    transition: opacity 0.2s ease-in;
-    display: flex;
-    flex-direction: column;
-    top: 68px;
-    left: 0;
-    width: 100%;
-    padding: 32px 0;
-    border-radius: 0 0 16px 16px;
-    border-top: 1px solid #ebeef2;
-    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.03);
-    background-color: #ffffff;
-  }
-}
-
-.navbar-nav {
-  display: flex;
-  justify-content: center;
-  gap: 45px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-@media screen and (max-width: 768px) {
-  .navbar-nav {
-    flex-direction: column;
-    text-align: center;
-    gap: 28px;
-  }
-}
-
-.navbar-toggler {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-@media screen and (min-width: 768px) {
-  .navbar-toggler {
-    display: none;
-  }
-}
-
 footer {
   margin-top: auto;
 }
@@ -602,4 +615,15 @@ footer {
     padding: 64px 0;
     max-width: 992px;
   }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
