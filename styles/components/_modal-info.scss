@@ -19,11 +19,11 @@ body:has(dialog[open]) {
     max-width: 400px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 576px) {
     max-width: 500px;
   }
 
-  @media screen and (min-width: 992px) {
+  @media screen and (min-width: 768px) {
     max-width: 630px;
   }
 }
@@ -40,11 +40,7 @@ body:has(dialog[open]) {
     object-fit: cover;
     border-radius: 6px;
     width: 85px;
-    height: 100%;
-
-    @media screen and (min-width: 768px) {
-      width: 85px;
-    }  
+    height: 100%; 
   }
 
   .header-info-container {
