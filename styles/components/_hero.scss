@@ -1,7 +1,6 @@
 @use "../abstracts/variables";
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(239, 72, 115, 0.3)), url(../../assets/images/hero-image-movie.webp) center center;
   background-size: cover;
   color: $white;
   position: relative;
@@ -15,6 +14,15 @@
     position: absolute;
     bottom: -1px;
   }
+
+  &.search-page {
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(239, 72, 114, 0.5)), url(../../assets/images/hero-image-movie.webp) center center;
+  }
+
+  &.watchlist {
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(239, 72, 115, 0.5)), url(../../assets/images/hero-image-watchlist.webp) center center;
+  }
+  
   
   h1 {
     @media screen and (max-width: 992px){
@@ -40,26 +48,32 @@
 }
 
 .hero-container {
-  @include flex-position(column, center);
+  @include flex-position(column, center, start);
   gap: 16px;
-  padding: 28px 24px 24px;
+  padding: 75px 24px;
   
   @media screen and (min-width: 576px){
+    min-height: 350px;
     padding-left: 0;
     padding-right: 0;
   }
 
   @media screen and (min-width: 992px){
-    min-height: 300px;
     align-items: center;
+
+    &.center {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   @media screen and (min-width: 1800px){
-    min-height: 400px;
+    min-height: 450px;
   }
 }
 
 .heading-container {
   @include flex-position(column);
-  gap: 16px;
+  gap: 14px;
+  z-index: 1;
 }

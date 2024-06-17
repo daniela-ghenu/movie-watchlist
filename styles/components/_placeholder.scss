@@ -1,0 +1,28 @@
+.placeholder-section {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $neutral-100;
+  text-align: center;
+  max-width: 540px;
+  margin: auto;
+  padding: 64px 0;
+
+  @media screen and (min-width: 768px) {
+    max-width: 650px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 992px;
+  }
+
+  &.hide {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -186,7 +186,6 @@ h5 {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(239, 72, 115, 0.3)), url(../../assets/images/hero-image-movie.webp) center center;
   background-size: cover;
   color: #ffffff;
   position: relative;
@@ -199,6 +198,12 @@ h5 {
   width: 100%;
   position: absolute;
   bottom: -1px;
+}
+.hero.search-page {
+  background: linear-gradient(rgb(0, 0, 0), rgba(239, 72, 114, 0.5)), url(../../assets/images/hero-image-movie.webp) center center;
+}
+.hero.watchlist {
+  background: linear-gradient(rgb(0, 0, 0), rgba(239, 72, 115, 0.5)), url(../../assets/images/hero-image-watchlist.webp) center center;
 }
 @media screen and (max-width: 992px) {
   .hero h1 {
@@ -228,31 +233,37 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
   gap: 16px;
-  padding: 28px 24px 24px;
+  padding: 75px 24px;
 }
 @media screen and (min-width: 576px) {
   .hero-container {
+    min-height: 350px;
     padding-left: 0;
     padding-right: 0;
   }
 }
 @media screen and (min-width: 992px) {
   .hero-container {
-    min-height: 300px;
     align-items: center;
+  }
+  .hero-container.center {
+    align-items: center;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1800px) {
   .hero-container {
-    min-height: 400px;
+    min-height: 450px;
   }
 }
 
 .heading-container {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
+  z-index: 1;
 }
 
 .search-form {
@@ -371,6 +382,72 @@ h5 {
     top: -20px;
     right: -18px;
   }
+}
+
+.add-movies-btn,
+.placeholder-movies-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+}
+
+.add-movies-btn {
+  margin-top: 24px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 1;
+  color: #ffffff;
+  background-color: #ef4873;
+  transition: background-color 0.2s ease-in-out;
+}
+.add-movies-btn:hover, .add-movies-btn:active {
+  background-color: #eb194f;
+}
+.add-movies-btn svg path {
+  stroke: #ffffff;
+}
+
+.placeholder-movies-btn {
+  color: #4f4b4b;
+}
+.placeholder-movies-btn svg path {
+  stroke: #4f4b4b;
+}
+.placeholder-movies-btn:hover, .placeholder-movies-btn:active {
+  color: #353232;
+}
+.placeholder-movies-btn:hover svg path, .placeholder-movies-btn:active svg path {
+  stroke: #353232;
+}
+
+.placeholder-section {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4f4b4b;
+  text-align: center;
+  max-width: 540px;
+  margin: auto;
+  padding: 64px 0;
+}
+@media screen and (min-width: 768px) {
+  .placeholder-section {
+    max-width: 650px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .placeholder-section {
+    max-width: 992px;
+  }
+}
+.placeholder-section.hide {
+  display: none;
+}
+.placeholder-section .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .movie-item {
@@ -590,7 +667,7 @@ footer {
   }
 }
 
-.movie-list .container {
+.movie-list > .container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 35px;
@@ -599,16 +676,15 @@ footer {
   padding: 32px 0;
 }
 @media screen and (min-width: 768px) {
-  .movie-list .container {
+  .movie-list > .container {
     grid-template-columns: repeat(2, 1fr);
     padding: 64px 0;
     max-width: 650px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .movie-list .container {
+  .movie-list > .container {
     grid-template-columns: repeat(3, 1fr);
-    padding: 64px 0;
     max-width: 992px;
   }
 }

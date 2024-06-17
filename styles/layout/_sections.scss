@@ -1,5 +1,5 @@
 .movie-list {
-  .container {
+  & > .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 35px;
@@ -15,7 +15,6 @@
 
     @media screen and (min-width: 1200px) {
       grid-template-columns: repeat(3, 1fr);
-      padding: 64px 0;
       max-width: 992px;
     }
   }

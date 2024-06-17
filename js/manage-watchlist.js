@@ -6,7 +6,7 @@ window.addEventListener("load", () =>  renderWatchlist());
 function manageWatchlist(e) {
   const toggleWatchlist = e.target.closest(".js-toggle-watchlist");
   const removeMovieBtn = e.target.closest(".js-remove-movie");
-
+  
   if(toggleWatchlist || removeMovieBtn) {  
     const movie  = toggleWatchlist? toggleWatchlist.closest(".movie-item") : removeMovieBtn.closest(".movie-item");
     const movieData = getMovieData(movie);
@@ -16,7 +16,7 @@ function manageWatchlist(e) {
     } else {
       addMovie(movieData);
     }
-
+  
     updateSearchedMoviesUI();
     renderWatchlist();
   } 
@@ -166,11 +166,24 @@ function createMovieTemplate(movie) {
   `;
 }
 
+function manageMoviesPlaceholder(placeholder) {
+  const watchlist =  getWatchlist();
+  
+  if(watchlist.length) {
+    placeholder.classList.add("hide");
+  } else {
+    placeholder.classList.remove("hide"); 
+  }
+}
+
 function renderWatchlist() {
   const watchlist =  getWatchlist();
   const watchlistContainer = document.querySelector(".movie-watchlist-container");
   const watchlistHtml = watchlist.map(movie => createMovieTemplate(movie)).join("");
- 
+  const placeholderMovies = document.querySelector(".placeholder.watchlist");
+  
+  manageMoviesPlaceholder(placeholderMovies);
+  
   if(watchlistContainer) {
     watchlistContainer.innerHTML = watchlistHtml;
   }

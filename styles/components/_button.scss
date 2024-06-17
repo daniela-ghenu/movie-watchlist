@@ -62,7 +62,7 @@
   &:hover,
   &:active {
     path {
-    stroke: $primary;
+      stroke: $primary;
     }
   }
 
@@ -74,5 +74,55 @@
   @media screen and (min-width: 992px) {
     top: -20px;
     right: -18px;
+  }
+}
+
+.add-movies-btn,
+.placeholder-movies-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: $font-weight-semibold;
+}
+
+.add-movies-btn {
+  margin-top: 24px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 1;
+  color: $white;
+  background-color: $primary;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: darken($primary, 10%);
+  }
+
+  svg {
+    path {
+      stroke: $white;
+    }
+  }
+}
+
+.placeholder-movies-btn {
+  color: $neutral-100;
+
+  svg {
+    path {
+      stroke: $neutral-100;
+    }
+  }
+
+  &:hover,
+  &:active {
+    color: darken($neutral-100, 10%);
+
+    svg {
+      path {
+        stroke: darken($neutral-100, 10%);
+      }
+    }
   }
 }
