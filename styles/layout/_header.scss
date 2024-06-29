@@ -2,4 +2,10 @@
 
 header {
   background-color: $neutral-300;
+  width: 100%;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1920px) {
+    max-width: 1920px;
+  }
 }

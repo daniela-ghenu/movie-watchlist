@@ -185,12 +185,13 @@ h5 {
   cursor: pointer;
 }
 
-.hero {
-  background-size: cover;
-  color: #ffffff;
+.hero-wrapper {
+  max-width: 1920px;
+  margin: auto;
   position: relative;
+  color: #ffffff;
 }
-.hero:after {
+.hero-wrapper:after {
   content: "";
   display: block;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(248, 248, 248, 0.56) 61.67%, #ffffff 100%);
@@ -199,32 +200,32 @@ h5 {
   position: absolute;
   bottom: -1px;
 }
-.hero.search-page {
-  background: linear-gradient(rgb(0, 0, 0), rgba(239, 72, 114, 0.5)), url(../../assets/images/hero-image-movie.webp) center center;
+.hero-wrapper.search-page {
+  background: linear-gradient(rgb(0, 0, 0), rgba(239, 72, 114, 0.5)), url(../../assets/images/hero-image-movie.webp) center center/cover no-repeat;
 }
-.hero.watchlist {
-  background: linear-gradient(rgb(0, 0, 0), rgba(239, 72, 115, 0.5)), url(../../assets/images/hero-image-watchlist.webp) center center;
+.hero-wrapper.watchlist {
+  background: linear-gradient(rgb(0, 0, 0), rgba(239, 72, 115, 0.5)), url(../../assets/images/hero-image-watchlist.webp) center center/cover no-repeat;
 }
 @media screen and (max-width: 992px) {
-  .hero h1 {
+  .hero-wrapper h1 {
     font-size: 2.25rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .hero h1 {
+  .hero-wrapper h1 {
     font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 500px) {
-  .hero h1 {
+  .hero-wrapper h1 {
     font-size: 1.5rem;
   }
 }
-.hero p {
+.hero-wrapper p {
   text-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 @media screen and (min-width: 576px) {
-  .hero p {
+  .hero-wrapper p {
     font-size: 1.25rem;
   }
 }
@@ -632,6 +633,13 @@ body {
 
 header {
   background-color: #050203;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1920px) {
+  header {
+    max-width: 1920px;
+  }
 }
 
 footer {
