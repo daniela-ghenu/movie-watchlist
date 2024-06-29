@@ -120,15 +120,9 @@ function createMovieTemplate(movie) {
       <dialog class="movie-modal">
         <div class="modal-wrapper">
           <button class="close-modal-btn js-close-modal-btn">
-            <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_429_11083)">
-                <path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#282828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_429_11083">
-                  <rect width="24" height="24" fill="white"/>
-                </clipPath>
-              </defs>
+            <svg aria-hidden="true" focusable="false" width="28px" height="28px">
+              <title>Close Icon</title>
+              <use xlink:href="#close-icon"/>
             </svg>
           </button>
           <div class="modal-header">
@@ -168,16 +162,15 @@ function createMovieTemplate(movie) {
 function getPlaceholder() {
   return `<div class="placeholder watchlist">
             <div class="container">
-              <svg width="84px" height="84px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-                <g id="SVGRepo_iconCarrier"> <rect width="18" height="18" rx="3" transform="matrix(1.39071e-07 1 1 -1.39071e-07 3 3)" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <line x1="7" y1="4" x2="7" y2="20" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <line x1="6" y1="8" x2="3" y2="8" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <line x1="21" y1="8" x2="18" y2="8" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <line x1="6" y1="16" x2="3" y2="16" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <line x1="21" y1="16" x2="18" y2="16" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <line x1="17" y1="4" x2="17" y2="20" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> <path d="M21 12L3 12" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round"/> </g>
-              </svg>
+              <svg aria-hidden="true" focusable="false" width="84px" height="84px">
+								<title>Movie Icon</title>
+								<use xlink:href="#movie-icon"/>
+							</svg>
               <p>Your watchlist is looking a little empty</p>
               <a href="/" class="placeholder-movies-btn">
-                <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19" stroke="#ef4873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M12 5L12 19" stroke="#ef4873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="icon-plus" aria-hidden="true" focusable="false" width="24px" height="24px">
+                  <title>Plus Icon</title>
+                  <use xlink:href="#plus-icon"/>
                 </svg>
                 <span>Let's add some movies</span>
               </a>

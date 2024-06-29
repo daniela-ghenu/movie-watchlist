@@ -146,15 +146,9 @@ function createMovieTemplate(movie) {
       <dialog class="movie-modal">
         <div class="modal-wrapper">
           <button class="close-modal-btn js-close-modal-btn">
-            <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_429_11083)">
-                <path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#282828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_429_11083">
-                  <rect width="24" height="24" fill="white"/>
-                </clipPath>
-              </defs>
+            <svg aria-hidden="true" focusable="false" width="28px" height="28px">
+              <title>Close Icon</title>
+              <use xlink:href="#close-icon"/>
             </svg>
           </button>
           <div class="modal-header">
@@ -201,10 +195,9 @@ function displayError(message) {
   movieListContainer.innerHTML = `
     <div class="placeholder error">
 			<div class="container">
-				<svg fill="#4f4b4b" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70px" height="70px" viewBox="0 0 106.059 106.059" xml:space="preserve" stroke="#7a7a7a">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"/>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-          <g id="SVGRepo_iconCarrier"> <g> <path d="M90.546,15.518C69.858-5.172,36.199-5.172,15.515,15.513C-5.173,36.198-5.171,69.858,15.517,90.547 c20.682,20.684,54.341,20.684,75.027-0.004C111.23,69.858,111.229,36.2,90.546,15.518z M84.757,84.758 c-17.494,17.494-45.96,17.496-63.455,0.002c-17.498-17.497-17.496-45.966,0-63.46C38.796,3.807,67.261,3.805,84.759,21.302 C102.253,38.796,102.251,67.265,84.757,84.758z M77.017,74.001c0.658,1.521-0.042,3.286-1.562,3.943 c-1.521,0.66-3.286-0.042-3.944-1.562c-2.893-6.689-9.73-11.012-17.421-11.012c-7.868,0-14.747,4.319-17.522,11.004 c-0.479,1.154-1.596,1.851-2.771,1.851c-0.384,0-0.773-0.074-1.15-0.23c-1.53-0.636-2.255-2.392-1.62-3.921 c3.71-8.932,12.764-14.703,23.063-14.703C64.174,59.371,73.174,65.113,77.017,74.001z M33.24,38.671 c0-3.424,2.777-6.201,6.201-6.201c3.423,0,6.2,2.776,6.2,6.201c0,3.426-2.777,6.202-6.2,6.202 C36.017,44.873,33.24,42.097,33.24,38.671z M61.357,38.671c0-3.424,2.779-6.201,6.203-6.201c3.423,0,6.2,2.776,6.2,6.201 c0,3.426-2.776,6.202-6.2,6.202S61.357,42.097,61.357,38.671z"/> </g> </g>
+        <svg aria-hidden="true" focusable="false" width="70px" height="70px">
+          <title>Sad Face Icon</title>
+          <use xlink:href="#sad-face-icon"/>
         </svg>
         <p class="error-message">${message}</p>
 			</div>

@@ -8,15 +8,96 @@
 	<link rel="stylesheet"  href="../css/main.css" type="text/css" media="all">
 </head>
 <body>
+<!-- Sprite svg start -->
+<div id="sprite-movies-watchlist" hidden>
+	<!-- Search Icon -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="icon-search" viewBox="0 0 28 28">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+				<g id="SVGRepo_iconCarrier">
+						<path fill="none" d="M21 21L15.0001 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#ffffff" stroke-width="1.968" stroke-linecap="round" stroke-linejoin="round"/>
+				</g>
+		</symbol>
+	</svg>
+	<!-- Bookmark Icon -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="icon-bookmark" viewBox="0 0 22 22">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+				<g id="SVGRepo_iconCarrier">
+						<path fill="none" d="M10 10.5H14M12 8.5V12.5M8.25 5H15.75C16.4404 5 17 5.58763 17 6.3125V19L12 15.5L7 19V6.3125C7 5.58763 7.55964 5 8.25 5Z" stroke="#ffffff" stroke-width="1.344" stroke-linecap="round" stroke-linejoin="round"/>
+				</g>
+		</symbol>
+	</svg>
+ <!-- Search Icon small -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="icon-search-octicon" viewBox="0 0 16 16">
+				<path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z" fill="#6a737d"/>
+		</symbol>
+	</svg>
+<!-- Movie Icon -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="movie-icon" viewBox="0 0 24 24">
+				<rect width="18" height="18" rx="3" transform="matrix(1.39071e-07 1 1 -1.39071e-07 3 3)" fill="none" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="7" y1="4" x2="7" y2="20" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="6" y1="8" x2="3" y2="8" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="21" y1="8" x2="18" y2="8" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="6" y1="16" x2="3" y2="16" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="21" y1="16" x2="18" y2="16" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="17" y1="4" x2="17" y2="20" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<path d="M21 12L3 12" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round"/>
+		</symbol>
+	</svg>
+	<!-- Close Icon -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="close-icon" viewBox="0 0 24 24">
+				<g clip-path="url(#clip0)">
+						<path d="M7 7.00006L17 17.0001M7 17.0001L17 7.00006" stroke="#282828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</g>
+				<defs>
+						<clipPath id="clip0">
+								<rect width="24" height="24" fill="white"/>
+						</clipPath>
+				</defs>
+		</symbol>
+	</svg>
+	<!-- Sad Face Icon -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="sad-face-icon" viewBox="0 0 106.059 106.059" fill="#4f4b4b" stroke="#7a7a7a">
+				<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+				<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+				<g id="SVGRepo_iconCarrier">
+						<g>
+								<path d="M90.546,15.518C69.858-5.172,36.199-5.172,15.515,15.513C-5.173,36.198-5.171,69.858,15.517,90.547 c20.682,20.684,54.341,20.684,75.027-0.004C111.23,69.858,111.229,36.2,90.546,15.518z M84.757,84.758 c-17.494,17.494-45.96,17.496-63.455,0.002c-17.498-17.497-17.496-45.966,0-63.46C38.796,3.807,67.261,3.805,84.759,21.302 C102.253,38.796,102.251,67.265,84.757,84.758z M77.017,74.001c0.658,1.521-0.042,3.286-1.562,3.943 c-1.521,0.66-3.286-0.042-3.944-1.562c-2.893-6.689-9.73-11.012-17.421-11.012c-7.868,0-14.747,4.319-17.522,11.004 c-0.479,1.154-1.596,1.851-2.771,1.851c-0.384,0-0.773-0.074-1.15-0.23c-1.53-0.636-2.255-2.392-1.62-3.921 c3.71-8.932,12.764-14.703,23.063-14.703C64.174,59.371,73.174,65.113,77.017,74.001z M33.24,38.671 c0-3.424,2.777-6.201,6.201-6.201c3.423,0,6.2,2.776,6.2,6.201c0,3.426-2.777,6.202-6.2,6.202 C36.017,44.873,33.24,42.097,33.24,38.671z M61.357,38.671c0-3.424,2.779-6.201,6.203-6.201c3.423,0,6.2,2.776,6.2,6.201 c0,3.426-2.776,6.202-6.2,6.202S61.357,42.097,61.357,38.671z"/>
+						</g>
+				</g>
+		</symbol>
+	</svg>
+	<!-- Plus icon -->
+	<svg xmlns="http://www.w3.org/2000/svg">
+		<symbol id="plus-icon" viewBox="0 0 24 24">
+			<path class="plus-line" d="M5 12H19" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path class="plus-line" d="M12 5L12 19" stroke="#4f4b4b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</symbol>
+	</svg>
+<!-- White Plus icon -->
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol id="white-plus-icon" viewBox="0 0 24 24" fill="none">
+			<path d="M5 12H19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<path d="M12 5L12 19" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+</svg>
+</div>
+<!-- Sprite svg end -->
 	<header>
 		<nav class="navbar">
 			<div class="container">
 				<a href="/" class="navbar-brand navbar-link">
-					<svg width="25px" height="25px" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)">
-						<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-						<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-						<g id="SVGRepo_iconCarrier"> <path d="M21 21L15.0001 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="#ffffff" stroke-width="1.968" stroke-linecap="round" stroke-linejoin="round"/> </g>
-						</svg>
+					<svg aria-hidden="true" focusable="false" width="25px" height="25px">
+						<title>Search Icon</title>
+						<use xlink:href="#icon-search"/>
+					</svg>
 					<span>Search Page</span>
 				</a>
 				<!-- <button class="navbar-toggler" type="button">
@@ -26,13 +107,10 @@
 					<ul class="navbar-nav">
 						<li class="nav-item">
 							<a class="navbar-link" href="/watchlist.html">
-								<svg width="25px" height="25px" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" stroke-width="1.344">
-									<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-									<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-									<g id="SVGRepo_iconCarrier">
-									<path d="M10 10.5H14M12 8.5V12.5M8.25 5H15.75C16.4404 5 17 5.58763 17 6.3125V19L12 15.5L7 19V6.3125C7 5.58763 7.55964 5 8.25 5Z" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
-									</g>
-									</svg>
+								<svg aria-hidden="true" focusable="false" width="25px" height="25px">
+									<title>Bookmark Icon</title>
+									<use xlink:href="#icon-bookmark"/>
+								</svg>
 								<span>Watchlist</span>
 							</a>
 						</li>
@@ -49,9 +127,9 @@
 					<p>Here you can keep track of your favorite movies.</p> 
 				</div>
 				<a href="/" class="add-movies-btn">
-					<svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M5 12H19" stroke="#ef4873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-						<path d="M12 5L12 19" stroke="#ef4873" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					<svg aria-hidden="true" focusable="false" width="24px" height="24px">
+						<title>White Plus Icon</title>
+						<use xlink:href="#white-plus-icon"/>
 					</svg>
 					<span>Add new movies</span>
 				</a>
