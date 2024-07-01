@@ -13,6 +13,17 @@ body {
   text-rendering: optimizespeed;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../assets/fonts/Inter-Regular.woff2") format("woff2");
@@ -631,15 +642,6 @@ body:has(dialog[open]) {
   margin-bottom: 14px;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100dvh;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizespeed;
-}
-
 header {
   background-color: #050203;
   width: 100%;
@@ -703,15 +705,4 @@ footer {
     justify-content: start;
     max-width: 992px;
   }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
 }

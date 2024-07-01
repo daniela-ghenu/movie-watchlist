@@ -1,4 +1,5 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .hero-wrapper {
   max-width: 1920px;

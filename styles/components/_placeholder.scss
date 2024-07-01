@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 .placeholder {
   font-size: $font-size-base;
   font-weight: $font-weight-semibold;

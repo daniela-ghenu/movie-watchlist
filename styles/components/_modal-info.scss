@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 // Disable page scroll when modal is open
 body:has(dialog[open]) {
   overflow-y: hidden;

@@ -1,20 +1,17 @@
 // -----------------------
 // 1. Basics
 //------------------------
-
-@import "abstracts/_index";
-@import "base/_index";
+@use "base";
+@use "utilities";
 
 // -----------------------
 // 2. Components
 //------------------------
-
-@import "core/_index";
-@import "components/_index";
+@use "core";
+@use "components";
 
 // -----------------------
 // 3. Sections
 //------------------------
-@import "layout/_index";
-@import "utilities/_index";
-@import "pages/_index";
+@use "layout";
+@use "pages";

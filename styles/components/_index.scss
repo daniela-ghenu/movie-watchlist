@@ -1,7 +1,7 @@
-@import 'navbar';
-@import 'hero';
-@import 'search-form';
-@import 'button';
-@import 'placeholder';
-@import 'movie-card';
-@import 'modal-info';
+@forward 'navbar';
+@forward 'hero';
+@forward 'search-form';
+@forward 'button';
+@forward 'placeholder';
+@forward 'movie-card';
+@forward 'modal-info';
