@@ -1,0 +1,93 @@
+@use "../abstracts/variables" as *;
+
+// Disable page scroll when modal is open
+body:has(dialog[open]) {
+  overflow-y: hidden;
+}
+
+.movie-modal {
+  padding: 30px 30px 20px 24px;
+  max-width: 360px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+ 
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 400px) {
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 576px) {
+    max-width: 500px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 630px;
+  }
+}
+
+.modal-wrapper {
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  gap: 16px;
+
+  .movie-img {
+    object-fit: cover;
+    border-radius: 6px;
+    width: 85px;
+    height: 100%; 
+  }
+
+  .header-info-container {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-sm;
+
+    @media screen and (min-width: 992px) {
+      font-size: $font-size-base;
+      gap: 7px;
+    }
+
+    h2 {
+      font-size: $font-size-base;
+
+      @media screen and (min-width: 992px) {
+        font-size: $font-size-md;
+      }
+    }
+
+    & > p {
+      margin-top: 8px;
+    }
+  }
+
+  .rating, 
+  .info-container {
+    margin-top: 8px;
+  }
+
+  .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.modal-body {
+  margin-top: 16px;
+
+  span {
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    margin-bottom: 14px;
+  }
+}

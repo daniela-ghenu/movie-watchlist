@@ -1,0 +1,78 @@
+// ------------------------
+// Variables
+//   1. Fonts
+//   2. Colors
+//   3. Gradients
+//   4. Themes
+//   5. Container Width
+// ------------------------
+
+// ------------------------
+// 1. Fonts
+// ------------------------
+
+$font-family-base: 'Inter', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+$font-size-base: 1rem;
+$font-size-xxs: 0.75rem;
+$font-size-xs: 0.813rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1.125rem;
+$font-size-lg: 1.25rem;
+
+$h1-font-size: $font-size-base * 2.813;
+$h2-font-size: $font-size-base * 2.25;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-bolder: 800;
+
+// ------------------------
+// 2. Colors
+// ------------------------
+
+$primary: #ef4873;
+$secondary: #3549fec6;
+$white: #ffffff;
+$neutral-100:#4f4b4b; 
+$neutral-200: #282828;
+$neutral-300: #050203;
+$black: #000000; 
+
+// ------------------------
+// 3. Gradients
+// ------------------------
+
+$bg-gradient-light: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(248, 248, 248, 0.56) 66.67%, #ffff 100%);
+
+// ------------------------
+// 4. Themes
+// ------------------------
+
+$themes: (
+  light: (
+    bg: $white,
+    text: $neutral-200,
+    button: $primary
+  ),
+  dark: (
+    bg: $neutral-200,
+    text: $white,
+    button: lighten($primary, 20%)
+  ),
+);
+
+// -------------------------
+// 5. Container Width
+// -------------------------
+
+//  Define the maximum width of container for different screen sizes.
+$container-sm: 520px;
+$container-md: 650px;
+$container-lg: 768px;
+$container-xl: 992px;
+$container-xxl: 1200px;

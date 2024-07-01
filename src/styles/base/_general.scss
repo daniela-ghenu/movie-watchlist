@@ -1,0 +1,14 @@
+*, 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100dvh;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizespeed;
+}

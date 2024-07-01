@@ -1,0 +1,25 @@
+@mixin themify($themes) {
+    @each $theme, $values in $themes {
+      .#{$theme}-theme {
+        $theme-map: $values !global;
+        @content;
+      }
+    }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin flex-position($direction: row, $justify: null, $align: null) {
+  display: flex;
+  flex-direction: $direction;
+  
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  
+  @if $align != null {
+    align-items: $align;
+  }
+}
