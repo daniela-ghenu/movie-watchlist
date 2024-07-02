@@ -1,6 +1,38 @@
+# Dependency directories
 node_modules/
+
+# Vite production build directory
+dist/
+
+# Vite caching directories
+.vite/
+.vitepress/dist
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+[Oo]bj/ # FlashDevelop obj
+[Bb]in/ # FlashDevelop bin
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Editor directories and files
+.idea
 .vscode
-.idea/
+.nvmrc
 
 # OSX
 .DS_Store
@@ -14,3 +46,7 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+# Other
+*.log
+*.tmp

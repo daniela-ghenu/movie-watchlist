@@ -74,7 +74,7 @@ function createMovieTemplate(movie) {
       data-id="${imdbID}"
       data-title="${Title}"
       data-poster=${
-        Poster !== "N/A" ? Poster : `../assets/images/image-fallback.png`
+        Poster !== "N/A" ? Poster : `/images/image-fallback.png`
       }"
       data-year="${Year}"
       data-runtime="${Runtime}"
@@ -88,7 +88,7 @@ function createMovieTemplate(movie) {
       <div class="movie-header">
         <button class="movie-poster js-open-modal-btn" data-movie="${imdbID}">
           <img src="${
-            Poster !== "N/A" ? Poster : `../assets/images/image-fallback.png`
+            Poster !== "N/A" ? Poster : `/images/image-fallback.png`
           }" 
           alt="${Title}" title="${Title}" width="275" height="250">
         </button>
@@ -103,13 +103,13 @@ function createMovieTemplate(movie) {
         </div>
 
         <div class="movie-rating">
-          <img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="Movie rating star icon">
+          <img class="rating-star-icon" src="/icons/rating-star-icon.svg" alt="Movie rating star icon">
           <span>${imdbRating}</span>
         </div>											
       </div>
       <div class="movie-buttons-container">
         <button class="remove-movie-btn js-remove-movie" data-movie="${imdbID}">
-          <img class="icon" src="../assets/icons/minus-icon.svg" alt="Minus icon">
+          <img class="icon" src="/icons/minus-icon.svg" alt="Minus icon">
           <span>Watchlist</span>
         </button>
         <button class="movie-info-btn js-open-modal-btn" data-movie="${imdbID}">
@@ -130,7 +130,7 @@ function createMovieTemplate(movie) {
               <img class="movie-img" src="${
                 Poster !== "N/A"
                   ? Poster
-                  : `../assets/images/image-fallback.png`
+                  : `/images/image-fallback.png`
               }" width="120" height="156">
             </div>
             <div class="header-info-container">
@@ -142,7 +142,7 @@ function createMovieTemplate(movie) {
               </div>
               <p>${Genre}</p>
               <div class="rating">
-                <img class="rating-star-icon" src="../assets/icons/rating-star-icon.svg" alt="Movie rating star icon">
+                <img class="rating-star-icon" src="/icons/rating-star-icon.svg" alt="Movie rating star icon">
                 <span>${imdbRating} / 10</span>
               </div>			
             </div>

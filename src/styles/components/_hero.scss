@@ -18,11 +18,11 @@
   }
 
   &.search-page {
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(239, 72, 114, 0.5)), url(../../assets/images/hero-image-movie.webp) center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(239, 72, 114, 0.5)), url(/images/hero-image-movie.webp) center center / cover no-repeat;
   }
 
   &.watchlist {
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(239, 72, 115, 0.5)), url(../../assets/images/hero-image-watchlist.webp) center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(239, 72, 115, 0.5)), url(/images/hero-image-watchlist.webp) center center / cover no-repeat;
   }
   
   h1 {

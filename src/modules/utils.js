@@ -16,11 +16,11 @@ export function updateSearchedMoviesUI() {
 
       if (watchlist.some(item => item.imdbID === movie.dataset.id)) {
         button.classList.add("is-added");
-        buttonIcon.src = "../assets/icons/check-icon.svg";
+        buttonIcon.src = "/icons/check-icon.svg";
         
       } else {
         button.classList.remove("is-added");
-        buttonIcon.src = "../assets/icons/plus-icon.svg";
+        buttonIcon.src = "/icons/plus-icon.svg";
       }
   });
 }
