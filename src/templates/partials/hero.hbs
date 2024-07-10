@@ -1,0 +1,36 @@
+<section class="hero">
+	<div class="hero-wrapper {{hero.sectionId}}">
+    <div class="container hero-container">
+      <div class="heading-container">
+        <h1>{{{hero.title}}}</h1>
+        <p>{{hero.subtitle}}</p>
+      </div>
+      {{#if hero.hasForm}}
+        <form id="search-form" class="search-form js-search-form" name="form" accept-charset="utf-8" aria-label="Search form">
+            <label for="search-input" aria-label="Search your favorite movie"></label>
+            <span id="search-icon" class="search-icon">
+              <svg aria-hidden="true" focusable="false" width="16" height="16">
+                  <title>Search Icon Octicon</title>
+                  <use xlink:href="#icon-search-octicon"/>
+              </svg>
+            </span>
+            <input
+            id="search-input"
+            class="search-input js-search-input"
+            name="search-input"
+            type="text"
+            placeholder="Search your favorite movie...">
+          <button class="search-button" type="submit" aria-label="Submit Search">Search</button>
+        </form>
+      {{else}}
+        <a href="/" class="add-movies-btn">
+          <svg aria-hidden="true" focusable="false" width="24px" height="24px">
+            <title>White Plus Icon</title>
+            <use xlink:href="#white-plus-icon"/>
+          </svg>
+          <span>Add new movies</span>
+        </a>
+      {{/if}}
+    </div>
+	</div>
+</section>
