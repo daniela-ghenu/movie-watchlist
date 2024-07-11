@@ -4,7 +4,6 @@ export default {
   hero: { 
     sectionId: "watchlist",
     title: "Your Watchlist",
-    subtitle: "Here you can keep track of your favorite movies.",
-    isCentered: true
+    subtitle: "Here you can keep track of your favorite movies."
   }
 }
