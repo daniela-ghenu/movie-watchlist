@@ -1,5 +1,5 @@
 import { getWatchlist, saveWatchlist, updateSearchedMoviesUI } from './utils.js';
-import getMoviesTemplate from './handlebars-setup.js';
+import { getMoviesTemplate, getPlaceholderTemplate } from './handlebars-setup.js';
 
 let watchlist =  getWatchlist();
 document.querySelector(".movie-list")?.addEventListener("click", manageWatchlist);
@@ -51,30 +51,10 @@ function getMovieData(movie) {
   };
 }
 
-function getPlaceholder() {
-  return `<div class="placeholder watchlist">
-            <div class="container">
-              <svg aria-hidden="true" focusable="false" width="84px" height="84px">
-								<title>Movie Icon</title>
-								<use xlink:href="#movie-icon"/>
-							</svg>
-              <p>Your watchlist is looking a little empty</p>
-              <a href="/" class="placeholder-movies-btn">
-                <svg class="icon-plus" aria-hidden="true" focusable="false" width="24px" height="24px">
-                  <title>Plus Icon</title>
-                  <use xlink:href="#plus-icon"/>
-                </svg>
-                <span>Let's add some movies</span>
-              </a>
-            </div>
-          </div>`
-}
-
 function renderWatchlist() {
-  const watchlistHtml = getMoviesTemplate(watchlist, "watchlist");
   const watchlistContainer = document.querySelector(".movie-watchlist-container");
 
   if(watchlistContainer) {
-    watchlistContainer.innerHTML = watchlist.length? watchlistHtml : getPlaceholder();
+    watchlistContainer.innerHTML = watchlist.length? getMoviesTemplate(watchlist, "watchlist") : getPlaceholderTemplate("", "watchlist");
   }
 }

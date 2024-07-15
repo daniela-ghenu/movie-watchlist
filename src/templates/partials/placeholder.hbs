@@ -1,0 +1,24 @@
+<div class="placeholder {{context}}">
+  <div class="container">
+    {{#if (eq context "watchlist")}}
+    <svg aria-hidden="true" focusable="false" width="84px" height="84px">
+      <title>Movie Icon</title>
+      <use xlink:href="#movie-icon"/>
+    </svg>
+    <p>Your watchlist is looking a little empty</p>
+    <a href="/" class="placeholder-movies-btn">
+      <svg class="icon-plus" aria-hidden="true" focusable="false" width="24px" height="24px">
+        <title>Plus Icon</title>
+        <use xlink:href="#plus-icon"/>
+      </svg>
+      <span>Let's add some movies</span>
+    </a>
+    {{else}}
+    <svg aria-hidden="true" focusable="false" width="70px" height="70px">
+      <title>Sad Face Icon</title>
+      <use xlink:href="#sad-face-icon"/>
+    </svg>
+    <p class="error-message">{{message}}</p>
+    {{/if}}
+  </div>
+</div>

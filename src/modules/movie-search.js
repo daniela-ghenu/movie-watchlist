@@ -1,5 +1,5 @@
 import { updateSearchedMoviesUI } from './utils.js';
-import getMoviesTemplate from './handlebars-setup.js';
+import  { getMoviesTemplate, getPlaceholderTemplate } from './handlebars-setup.js';
 
 const API_KEY = "fb9fa955";
 const API_URL = "http://www.omdbapi.com/";
@@ -78,14 +78,5 @@ function renderMovies(movies) {
 
 // Displays an error message in the UI.
 function displayError(message) {
-  movieListContainer.innerHTML = `
-    <div class="placeholder error">
-			<div class="container">
-        <svg aria-hidden="true" focusable="false" width="70px" height="70px">
-          <title>Sad Face Icon</title>
-          <use xlink:href="#sad-face-icon"/>
-        </svg>
-        <p class="error-message">${message}</p>
-			</div>
-		</div>`;
+  movieListContainer.innerHTML = getPlaceholderTemplate(message, "error");
 }
