@@ -15,6 +15,9 @@ export default defineConfig({
   // Plugins configurations
   plugins: [
     handlebars({
+      helpers: {
+        eq: (a, b) => a === b
+      },
       partialDirectory: [
         resolve(__dirname, './src/templates'),
         resolve(__dirname, './src/templates/partials'),

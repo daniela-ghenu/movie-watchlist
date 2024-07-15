@@ -5,7 +5,7 @@
         <h1>{{{hero.title}}}</h1>
         <p>{{hero.subtitle}}</p>
       </div>
-      {{#if hero.hasForm}}
+      {{#if (eq hero.sectionId "search-page")}}
         <form id="search-form" class="search-form js-search-form" name="form" accept-charset="utf-8" aria-label="Search form">
             <label for="search-input" aria-label="Search your favorite movie"></label>
             <span id="search-icon" class="search-icon">
