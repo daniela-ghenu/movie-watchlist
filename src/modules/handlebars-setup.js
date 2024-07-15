@@ -12,13 +12,16 @@ Handlebars.registerHelper('eq', (a, b) => a === b);
 Handlebars.registerPartial('movie', movie);
 
 // Compile templates
-const moviesTemplate = Handlebars.compile(moviesList);
-const placeholderTemplate = Handlebars.compile(placeholder);
+const templates = {
+  moviesList,
+  placeholder
+};
 
-export function getMoviesTemplate(data, context) {
-  return moviesTemplate({ movies: data, context });
-}
-
-export function getPlaceholderTemplate(data, context) {
-  return placeholderTemplate({ message: data, context });
+export default function getTemplate(templateName, data) {
+  const templateString = templates[templateName];
+  if (!templateString) {
+    throw new Error(`Template "${templateName}" not found.`);
+  }
+  const template = Handlebars.compile(templateString);
+  return template(data);
 }

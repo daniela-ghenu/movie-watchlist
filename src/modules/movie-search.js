@@ -1,5 +1,5 @@
 import { updateSearchedMoviesUI } from './utils.js';
-import  { getMoviesTemplate, getPlaceholderTemplate } from './handlebars-setup.js';
+import getTemplate from './handlebars-setup.js';
 
 const API_KEY = "fb9fa955";
 const API_URL = "http://www.omdbapi.com/";
@@ -71,12 +71,12 @@ function isEqual(movieItem, movie) {
 
 // Renders the list of movies to the UI.
 function renderMovies(movies) {
-  const moviesHtml = getMoviesTemplate(movies, "search");
+  const moviesHtml = getTemplate("moviesList", { movies, context: "search" });
   movieListContainer.innerHTML = moviesHtml;
   updateSearchedMoviesUI();
 }
 
 // Displays an error message in the UI.
 function displayError(message) {
-  movieListContainer.innerHTML = getPlaceholderTemplate(message, "error");
+  movieListContainer.innerHTML = getTemplate("placeholder", { message, context: "error" });
 }

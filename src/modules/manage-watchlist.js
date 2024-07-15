@@ -1,5 +1,5 @@
 import { getWatchlist, saveWatchlist, updateSearchedMoviesUI } from './utils.js';
-import { getMoviesTemplate, getPlaceholderTemplate } from './handlebars-setup.js';
+import getTemplate from './handlebars-setup.js';
 
 let watchlist =  getWatchlist();
 document.querySelector(".movie-list")?.addEventListener("click", manageWatchlist);
@@ -53,8 +53,10 @@ function getMovieData(movie) {
 
 function renderWatchlist() {
   const watchlistContainer = document.querySelector(".movie-watchlist-container");
+  const watchlistHtml = getTemplate("moviesList", { movies: watchlist, context: "watchlist" });
+  const placeholderHtml = getTemplate("placeholder", { message:"", context: "watchlist" });
 
   if(watchlistContainer) {
-    watchlistContainer.innerHTML = watchlist.length? getMoviesTemplate(watchlist, "watchlist") : getPlaceholderTemplate("", "watchlist");
+    watchlistContainer.innerHTML = watchlist.length? watchlistHtml : placeholderHtml;
   }
 }
