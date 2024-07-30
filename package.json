@@ -1,14 +1,13 @@
 {
   "name": "movie-watchlist",
   "version": "1.0.0",
-  "description": "Movie watchlist app",
+  "description": "Movie Watchlist app built with Vite that allows users to search movies and manage their watchlist.",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "compile-sass": "sass src/styles/main.scss css/main.css -w --no-source-map",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "author": "Daniela",
   "license": "MIT",
