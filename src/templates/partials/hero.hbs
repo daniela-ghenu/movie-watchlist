@@ -23,13 +23,22 @@
           <button class="search-button" type="submit" aria-label="Submit Search">Search</button>
         </form>
       {{else}}
-        <a href="/" class="add-movies-btn">
-          <svg aria-hidden="true" focusable="false" width="24px" height="24px">
-            <title>White Plus Icon</title>
-            <use xlink:href="#white-plus-icon"/>
-          </svg>
-          <span>Add new movies</span>
-        </a>
+        <div class="hero-buttons-container">
+          <a href="/" class="hero-btn">
+            <svg aria-hidden="true" focusable="false" width="24px" height="24px">
+              <title>White Plus Icon</title>
+              <use xlink:href="#white-plus-icon"/>
+            </svg>
+            <span>Add new movies</span>
+          </a>
+          <button class="hero-btn js-clear-watchlist-btn">
+            <svg aria-hidden="true" focusable="false" width="24px" height="24px">
+              <title>Trash Icon</title>
+              <use xlink:href="#trash-icon"/>
+            </svg>
+            <span>Clear watchlist</span>
+          </button>
+        </div>
       {{/if}}
     </div>
 	</div>

@@ -3,7 +3,26 @@ import getTemplate from './handlebars-setup.js';
 
 let watchlist =  getWatchlist();
 document.querySelector(".movie-list")?.addEventListener("click", manageWatchlist);
-window.addEventListener("load", () =>  renderWatchlist());
+const clearButton = document.querySelector(".js-clear-watchlist-btn");
+clearButton?.addEventListener("click", clearWatchlist);
+
+window.addEventListener("load", () =>  {
+  renderWatchlist();
+  updateClearButtonState();
+});
+
+function clearWatchlist() {
+  localStorage.clear();
+  watchlist = getWatchlist();
+  renderWatchlist();
+  updateClearButtonState();
+}
+
+function updateClearButtonState() {
+  if(clearButton) {
+    clearButton.disabled = watchlist.length === 0;
+  }
+}
 
 function manageWatchlist(e) {
   const toggleWatchlist = e.target.closest(".js-toggle-watchlist");
@@ -21,6 +40,7 @@ function manageWatchlist(e) {
   
     updateSearchedMoviesUI();
     renderWatchlist();
+    updateClearButtonState();
   } 
 }
 

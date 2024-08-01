@@ -1,5 +1,60 @@
 @use "../abstracts/variables" as *;
 
+// ----------------
+// Hero Buttons
+// ----------------
+.hero-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  margin: 24px auto 0;
+
+  @media  screen and (max-width: 440px) {
+    flex-direction: column;
+    width: 75%;
+  }
+}
+
+.hero-btn,
+.placeholder-movies-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-weight: $font-weight-semibold;
+}
+
+.hero-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  z-index: 1;
+  color: $white;
+  background-color: $primary;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    &:not(:disabled) {
+      background-color: darken($primary, 10%);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+  }
+
+  svg {
+    path {
+      stroke: $white;
+    }
+  }
+}
+
+// ----------------
+// Movie Buttons
+// ----------------
 .movie-buttons-container,
 .modal-body {
   button {
@@ -44,6 +99,9 @@
   }
 }
 
+// ----------------
+// Modal Buttons
+// ----------------
 .modal-body {
   button {
     font-size: $font-size-xs;
@@ -77,35 +135,9 @@
   }
 }
 
-.add-movies-btn,
-.placeholder-movies-btn {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-weight: $font-weight-semibold;
-}
-
-.add-movies-btn {
-  margin-top: 24px;
-  padding: 8px 16px;
-  border-radius: 8px;
-  z-index: 1;
-  color: $white;
-  background-color: $primary;
-  transition: background-color 0.2s ease-in-out;
-
-  &:hover,
-  &:active {
-    background-color: darken($primary, 10%);
-  }
-
-  svg {
-    path {
-      stroke: $white;
-    }
-  }
-}
-
+// --------------------
+// Placeholder Buttons
+// --------------------
 .placeholder-movies-btn {
   color: $neutral-100;
 
