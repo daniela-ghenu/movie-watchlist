@@ -5,9 +5,10 @@ body {
   font-family: $font-family-base;
 	font-size: $font-size-base;
 	font-weight: $font-weight-normal;
-	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
 }
 
 @include themify($themes) {
@@ -15,10 +16,6 @@ body {
 		background-color: themed(bg);
 		color: themed(text);
 	}
-}
-
-main {
-	overflow: hidden;
 }
 
 a {
@@ -36,11 +33,6 @@ button {
 	font: inherit;
   border: none;
 	cursor: pointer;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
 }
 
 h1, 
