@@ -60,6 +60,7 @@
 .modal-body {
   button {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 4px;
     font-weight: $font-weight-bold;
@@ -69,9 +70,11 @@
     border: 2px solid $primary;
     border-radius: 8px;
 
-    &:hover,
-    &:active {
-      background-color: lighten($primary, 32%);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover,
+      &:active {
+        background-color: lighten($primary, 32%);
+      }
     }
   }
 
@@ -84,8 +87,8 @@
 
 .movie-buttons-container {
   button {
-    font-size: $font-size-xxs;
-    padding: 2px 20px;
+    font-size: $font-size-xs;
+    padding: 5px 30px;
   }
 
   .remove-movie-btn {
@@ -93,10 +96,13 @@
   }
   
   .movie-info-btn {
-    font-size: $font-size-base;
+    font-size: $font-size-md;
     text-transform: none;
-    padding: 5px 12px;
+    width: 36px;
+    height: 36px;
+    padding: 0;
     border-radius: 50px;
+    aspect-ratio: 1/1;
   }
 }
 
@@ -117,13 +123,6 @@
   right: -28px;
   background-color: transparent;
   border: none;
-
-  &:hover,
-  &:active {
-    path {
-      stroke: $primary;
-    }
-  }
 
   @media screen and (min-width: 400px) {
     top: -24px;
@@ -147,15 +146,11 @@
       stroke: $neutral-100;
     }
   }
-
-  &:hover,
-  &:active {
-    color: darken($neutral-100, 10%);
-
-    svg {
-      path {
-        stroke: darken($neutral-100, 10%);
-      }
+  
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:active {
+      color: darken($neutral-100, 10%);
     }
   }
 }
