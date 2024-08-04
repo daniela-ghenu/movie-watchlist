@@ -7,6 +7,7 @@ const API_URL = "http://www.omdbapi.com/";
 const searchForm = document.querySelector(".js-search-form");
 const searchBar = document.querySelector(".js-search-input");
 const movieListContainer = document.querySelector(".movie-list-container");
+const loader = document.querySelector(".loader");
 
 searchForm?.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,7 +17,9 @@ searchForm?.addEventListener("submit", (e) => {
 async function handleSearch() {
   if (!searchBar.value) return;
 
+  showLoader();
   const searchResults = await fetchMovies(searchBar.value);
+  hideLoader();
 
   if (searchResults.error) {
     displayError(searchResults.error);
@@ -24,6 +27,23 @@ async function handleSearch() {
     renderMovies(searchResults);
   }
   searchForm.reset();
+}
+
+function showLoader() {
+  const placeholder = document.querySelector(".placeholder");
+  const movies = document.querySelectorAll(".movie-item");
+  
+  if (placeholder) {
+    placeholder.style.display = "none";
+  } else if (movies) {
+    movies.forEach(movie => movie.style.display = "none");
+  }
+  
+  loader.style.display = "block";
+}
+
+function hideLoader() {
+  loader.style.display = "none";
 }
 
 // Fetches movies from the OMDB API. Returns array of movie objects or an error object.
