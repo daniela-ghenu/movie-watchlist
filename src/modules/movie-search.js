@@ -77,16 +77,12 @@ function removeDuplicateMovies(movies) {
 
   // Check if the movie item already exists in uniqueMovies
   movies.forEach((movie) => {
-    if (!uniqueMovies.some((movieItem) => isEqual(movieItem, movie))) {
+    if (!uniqueMovies.some((movieItem) => movieItem.imdbID === movie.imdbID)) {
       uniqueMovies.push(movie);
     }
   });
 
   return uniqueMovies;
-}
-
-function isEqual(movieItem, movie) {
-  return JSON.stringify(movieItem) === JSON.stringify(movie);
 }
 
 // Renders the list of movies to the UI.

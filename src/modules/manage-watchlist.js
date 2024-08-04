@@ -6,6 +6,7 @@ document.querySelector(".movie-list")?.addEventListener("click", manageWatchlist
 const clearButton = document.querySelector(".js-clear-watchlist-btn");
 clearButton?.addEventListener("click", clearWatchlist);
 
+// When the page has loaded, display the placeholder or the movies
 window.addEventListener("load", () =>  {
   renderWatchlist();
   updateClearButtonState();
@@ -18,12 +19,14 @@ function clearWatchlist() {
   updateClearButtonState();
 }
 
+// Enable 'clear watchlist' button only if watchlist is not empty
 function updateClearButtonState() {
   if(clearButton) {
     clearButton.disabled = watchlist.length === 0;
   }
 }
 
+// Add or remove movies to or from watchlist and update the UI
 function manageWatchlist(e) {
   const toggleWatchlist = e.target.closest(".js-toggle-watchlist");
   const removeMovieBtn = e.target.closest(".js-remove-movie");
@@ -54,6 +57,7 @@ function removeMovie(movie) {
   saveWatchlist(watchlist);
 }
 
+// Get movie info from its data attributes, to save them in local storage
 function getMovieData(movie) {
   return {
     imdbID: movie.dataset.id,

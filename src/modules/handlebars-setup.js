@@ -11,12 +11,12 @@ Handlebars.registerHelper('eq', (a, b) => a === b);
 // Register partials
 Handlebars.registerPartial('movie', movie);
 
-// Compile templates
 const templates = {
   moviesList,
   placeholder
 };
 
+// Compile templates
 export default function getTemplate(templateName, data) {
   const templateString = templates[templateName];
   if (!templateString) {
