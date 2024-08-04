@@ -1,18 +1,10 @@
 @use "../abstracts/variables" as *;
 
 .navbar {
-  position: relative;
-  padding: 16px 8px;
-  transition: background-color 0.2s ease-in;
-  
-  &:has(.open) {
-    @media screen and (max-width: 768px) {
-      background-color: $white;
-    }
-  }
+  padding: 12px 8px;
 
-  @media screen and (max-width: 576px) {
-    padding: 12px 8px;
+  @media screen and (min-width: 576px) {
+    padding: 16px 8px;
   }
 
   .container {
@@ -20,38 +12,8 @@
     justify-content: space-between;
     align-items: center;
   }
-
-  a {
-    font-size: $font-size-base;
-    color: $white;
-    text-decoration: none;
-  }
 }
 
-.navbar-menu {
-  // @media screen and (max-width: 768px) {
-  //   position: absolute;
-  //   opacity: 0;
-  // }
-   
- &.show {
-    @media screen and (max-width: 768px) {
-      opacity: 1;
-      transition: opacity 0.2s ease-in;
-      display: flex;
-      flex-direction: column;
-      top: 68px;
-      left: 0;
-      width: 100%;
-      padding: 32px 0;
-      border-radius: 0 0 16px 16px;
-      border-top: 1px solid $white;
-      box-shadow: 0 15px 15px 0 rgba(0, 0, 0, .03);
-      background-color: $white;
-    }
-  }
-}
- 
 .navbar-nav {
   display: flex;
   justify-content: center;
@@ -59,12 +21,6 @@
   padding: 0;
   margin: 0;
   list-style: none;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    gap: 28px;
-  }
 }
 
 .navbar-link {
@@ -72,6 +28,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 8px;
+  font-size: $font-size-base;
+  color: $white;
+  text-decoration: none;
   padding: 8px 22px 8px 16px;
   border-radius: 5px;
   transition: background-color 0.2s ease-in-out;
@@ -79,27 +38,4 @@
   &:hover {
     background-color: lighten($neutral-300, 9.5%);
   }
-}
-  
-.navbar-toggler {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  
-  // @media screen and (min-width: 768px) {
-  //   display: none;
-  // }
-
-  // &::before {
-  //   content: "\f0c9";
-  //   font-family: "Font Awesome 6 Free";
-  //   font-weight: 900;
-  //   font-size: 1.55rem;
-  // }
-  
-  // &.open {
-  //   &::before {
-  //     content: "\f00d";
-  //   }
-  // }
 }
