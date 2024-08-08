@@ -2,7 +2,7 @@ import { updateSearchedMoviesUI } from './utils.js';
 import getTemplate from './handlebars-setup.js';
 
 const API_KEY = "fb9fa955";
-const API_URL = "http://www.omdbapi.com/";
+const API_URL = "https://www.omdbapi.com/";
 
 const searchForm = document.querySelector(".js-search-form");
 const searchBar = document.querySelector(".js-search-input");
